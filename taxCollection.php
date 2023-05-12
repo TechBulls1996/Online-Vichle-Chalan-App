@@ -1,3 +1,8 @@
+<?php
+ if($_SERVER['REQUEST_METHOD'] ==='POST'){
+   return "hello";
+ }
+?>
 <?php include_once('./includes/header.php') ?>
 <div>
      <div id="popup" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container center-position">
@@ -12,7 +17,7 @@
         </div>
     </div>
     <script id="popup_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","dlg1",{id:"popup",draggable:false,modal:true});});</script> 
-    
+
         <div class="container">
             <div class="ui-grid ui-grid-responsive">
                 <div class="ui-grid-row">
