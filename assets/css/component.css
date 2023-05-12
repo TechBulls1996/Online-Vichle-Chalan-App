@@ -1190,7 +1190,7 @@ ui-overlay-visible * {
 }
 
 .ui-datascroller .ui-datascroller-loading {
-    background: url("/checkpost/faces/javax.faces.resource/datascroller/images/loading.gif?ln=primefaces&v=7.0") center center no-repeat;
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/datascroller/images/loading.gif?ln=primefaces&v=7.0") center center no-repeat;
     width: 220px;
     height: 19px;
     padding: 0;
@@ -1408,7 +1408,7 @@ ui-overlay-visible * {
     height: 100%;
     padding: 0;
     cursor: col-resize;
-    background-image: url("/checkpost/faces/javax.faces.resource/spacer/dot_clear.gif?ln=primefaces&v=7.0");
+    background-image: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/spacer/dot_clear.gif?ln=primefaces&v=7.0");
     border: 1px solid transparent;
     box-sizing: border-box
 }
@@ -2359,7 +2359,7 @@ div.ui-button,.ui-splitbutton {
 
 .ui-password-panel .ui-password-meter {
     height: 10px;
-    background: transparent url("/checkpost/faces/javax.faces.resource/forms/password-meter.png?ln=primefaces&v=7.0") no-repeat left top;
+    background: transparent url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/forms/password-meter.png?ln=primefaces&v=7.0") no-repeat left top;
     padding: 0;
     margin: 0
 }
@@ -3381,7 +3381,7 @@ div.ui-button,.ui-splitbutton {
     margin: 0;
     padding: 0;
     display: block;
-    background: url("/checkpost/faces/javax.faces.resource/messages/messages.png?ln=primefaces&v=7.0") no-repeat
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/messages/messages.png?ln=primefaces&v=7.0") no-repeat
 }
 
 .ui-growl-image-info {
@@ -3453,7 +3453,7 @@ div.ui-button,.ui-splitbutton {
 }
 
 .ui-lightbox-loading {
-    background: url("/checkpost/faces/javax.faces.resource/lightbox/images/loading.gif?ln=primefaces&v=7.0") #000 center center no-repeat
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/lightbox/images/loading.gif?ln=primefaces&v=7.0") #000 center center no-repeat
 }
 
 .ui-lightbox-caption {
@@ -3984,7 +3984,7 @@ div.ui-button,.ui-splitbutton {
 }
 
 .ui-messages-info-icon,.ui-messages-warn-icon,.ui-messages-error-icon,.ui-messages-fatal-icon,.ui-message-info-icon,.ui-message-warn-icon,.ui-message-error-icon,.ui-message-fatal-icon {
-    background: url("/checkpost/faces/javax.faces.resource/messages/messages.png?ln=primefaces&v=7.0") no-repeat;
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/messages/messages.png?ln=primefaces&v=7.0") no-repeat;
     display: block;
     float: left;
     margin: 0;
@@ -4185,7 +4185,7 @@ div.ui-button,.ui-splitbutton {
 }
 
 .ui-outputpanel-loading {
-    background: url("/checkpost/faces/javax.faces.resource/outputpanel/images/loading.gif?ln=primefaces&v=7.0") center center no-repeat;
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/outputpanel/images/loading.gif?ln=primefaces&v=7.0") center center no-repeat;
     width: 32px;
     height: 32px
 }
@@ -4721,7 +4721,7 @@ div.ui-button,.ui-splitbutton {
     width: 16px;
     height: 15px;
     display: block;
-    background: url("/checkpost/faces/javax.faces.resource/rating/rating.png?ln=primefaces&v=7.0") no-repeat 0 0
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/rating/rating.png?ln=primefaces&v=7.0") no-repeat 0 0
 }
 
 .ui-rating-star a {
@@ -5240,7 +5240,7 @@ div.ui-button,.ui-splitbutton {
 }
 
 .ui-tree.ui-tree-horizontal .ui-treenode {
-    background: url("/checkpost/faces/javax.faces.resource/tree/images/line.gif?ln=primefaces&v=7.0") repeat-x scroll center center transparent;
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/tree/images/line.gif?ln=primefaces&v=7.0") repeat-x scroll center center transparent;
     padding: 5px 40px
 }
 
@@ -5263,7 +5263,7 @@ div.ui-button,.ui-splitbutton {
 }
 
 .ui-tree.ui-tree-horizontal .ui-treenode-connector-line {
-    background: url("/checkpost/faces/javax.faces.resource/tree/images/line.gif?ln=primefaces&v=7.0") repeat-y scroll 0 0 transparent;
+    background: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/tree/images/line.gif?ln=primefaces&v=7.0") repeat-y scroll 0 0 transparent;
     width: 1px
 }
 
@@ -5447,7 +5447,7 @@ div.ui-button,.ui-splitbutton {
     height: 20px;
     padding: 0;
     cursor: col-resize;
-    background-image: url("/checkpost/faces/javax.faces.resource/spacer/dot_clear.gif?ln=primefaces&v=7.0");
+    background-image: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/spacer/dot_clear.gif?ln=primefaces&v=7.0");
     margin: -4px -10px -4px 0;
     float: right
 }
