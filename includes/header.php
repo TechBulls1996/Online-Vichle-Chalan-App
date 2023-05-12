@@ -54,17 +54,17 @@ include_once 'connection.php';
                 <div class="ui-grid ui-grid-responsive">
                     <div class="ui-grid-row">
                         <div class="ui-grid-col-2 left_logo">
-                            <a class="top-space inline-section"><img id="j_idt14" src="/checkpost/faces/javax.faces.resource/checkpost-logo.png?ln=images" alt="Check Post Logo">
+                            <a class="top-space inline-section"><img id="j_idt14" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/checkpost-logo.png?ln=images" alt="Check Post Logo">
                             </a>
                         </div>
                         <div class="ui-grid-col-8">
-                            <div class="heading_w center-position top-space"><img id="j_idt16" src="/checkpost/faces/javax.faces.resource/emblem-logo.png?ln=images" class="emblem-logo" alt="State Emblem of India">
+                            <div class="heading_w center-position top-space"><img id="j_idt16" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/emblem-logo.png?ln=images" class="emblem-logo" alt="State Emblem of India">
                                 <div class="font-bold text-welcome-heading welcome-heading-size text-uppercase">ministry of road transport and highways</div>
                                 <div class="font-bold text-welcome-heading welcome-sub-heading-size">Government of India</div>
                             </div>
                         </div>
                         <div class="ui-grid-col-2 right_logo">
-                            <a class="top-space inline-section"><img id="j_idt18" src="/checkpost/faces/javax.faces.resource/e-vahan-logo.png?ln=images" alt="e-Vahan Logo">
+                            <a class="top-space inline-section"><img id="j_idt18" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/e-vahan-logo.png?ln=images" alt="e-Vahan Logo">
                             </a>
                         </div>
                     </div>
