@@ -8,8 +8,9 @@ include_once 'connection.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkpost ~1~85</title>
-    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
+
 </head>
 <body>
     
