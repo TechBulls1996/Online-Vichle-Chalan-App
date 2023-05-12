@@ -16,7 +16,17 @@ include_once 'connection.php';
     <link rel="stylesheet" href="/assets/css/component.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=7.0"></script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=7.0"></script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/core.js?ln=primefaces&v=7.0"></script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/components.js?ln=primefaces&v=7.0"></script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jsf.js?ln=javax.faces&stage=Development"></script>
+
+    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/commonvalidation.js?ln=js"></script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/login.js?ln=js"></script>
+    
 </head>
 <body>
     
