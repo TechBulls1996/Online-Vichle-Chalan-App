@@ -1,8 +1,45 @@
 <?php
  if($_SERVER['REQUEST_METHOD'] ==='POST'){
+    print_r($_POST);
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollection.xhtml',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS =>'javax.faces.partial.ajax=true&javax.faces.source=ib_state&javax.faces.partial.execute=ib_state&javax.faces.partial.render=operation_code&javax.faces.behavior.event=change&javax.faces.partial.event=change&master_Layout_form=master_Layout_form&ib_state_focus=&ib_state_input=MH&operation_code_focus=&operation_code_input=-1&javax.faces.ViewState=1399913001236130417%3A6625332671049041109',
+        CURLOPT_HTTPHEADER => array(
+          'Accept: application/xml, text/xml, */*; q=0.01',
+          'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,mt;q=0.7,es;q=0.6,gu;q=0.5',
+          'Connection: keep-alive',
+          'Content-Type: application/x-www-form-urlencoded; charset=UTF-8',
+          'Cookie: JSESSIONID=6C832EDD5BD773118AA71FDB59031031; SERVERID_checkpost_22=vahan_check8085; JSESSIONID=8C324C8E764B163977A4F56E0909C220',
+          'Faces-Request: partial/ajax',
+          'Origin: https://checkpost.parivahan.gov.in',
+          'Referer: https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollection.xhtml',
+          'Sec-Fetch-Dest: empty',
+          'Sec-Fetch-Mode: cors',
+          'Sec-Fetch-Site: same-origin',
+          'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
+          'X-Requested-With: XMLHttpRequest',
+          'sec-ch-ua: "Chromium";v="112", "Google Chrome";v="112", "Not:A-Brand";v="99"',
+          'sec-ch-ua-mobile: ?0',
+          'sec-ch-ua-platform: "macOS"'
+        ),
+      ));
+      
+      $response = curl_exec($curl);
+      
+      curl_close($curl);
+      echo $response;
 ?>
 <?xml version='1.0' encoding='UTF-8'?>
 <partial-response id="j_id1"><changes><update id="operation_code"><![CDATA[<div id="operation_code" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" style="width:90%!important;" role="combobox" aria-haspopup="true" aria-expanded="false"><div class="ui-helper-hidden-accessible"><input id="operation_code_focus" name="operation_code_focus" type="text" autocomplete="off" aria-expanded="false" aria-required="true" /></div><div class="ui-helper-hidden-accessible"><select id="operation_code_input" name="operation_code_input" tabindex="-1" aria-hidden="true"><option value="-1" data-escape="true">---Select Service Name---</option><option value="5003" data-escape="true">VEHICLE TAX COLLECTION (OTHER STATE)</option></select></div><label id="operation_code_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div><div id="operation_code_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-filter-container"><input class="ui-selectonemenu-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" id="operation_code_filter" name="operation_code_filter" type="text" autocomplete="off"><span class="ui-icon ui-icon-search"></span></input></div><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"><ul id="operation_code_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select Service Name---" tabindex="-1" role="option">---Select Service Name---</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="VEHICLE TAX COLLECTION (OTHER STATE)" tabindex="-1" role="option">VEHICLE TAX COLLECTION (OTHER STATE)</li></ul></div></div></div><script id="operation_code_s" type="text/javascript">PrimeFaces.cw("SelectOneMenu","widget_operation_code",{id:"operation_code",appendTo:"@(body)",filter:true});</script>]]></update><update id="j_id1:javax.faces.ViewState:0"><![CDATA[3317153914673913160:7233621980938615816]]></update></changes></partial-response>
+
+
 <?php
 } else {
  include_once('./includes/header.php') ?>
