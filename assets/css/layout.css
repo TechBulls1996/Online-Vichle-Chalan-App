@@ -956,7 +956,7 @@ disabled{
     /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);*/
     width: 100%;
     min-height: 100%;
-    background-image: url("images/header-bg1.png")!important;
+    background-image: url("https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/images/header-bg1.png")!important;
     background-repeat: no-repeat;
     background-size:cover; 
     /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);*/
