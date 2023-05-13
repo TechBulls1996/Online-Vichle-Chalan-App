@@ -1,6 +1,5 @@
 <?php
  if($_SERVER['REQUEST_METHOD'] ==='POST'){
-    print_r($_POST);
 
     $curl = curl_init();
     curl_setopt_array($curl, array(
