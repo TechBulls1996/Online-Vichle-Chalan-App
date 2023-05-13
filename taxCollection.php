@@ -1,6 +1,8 @@
 <?php
  if($_SERVER['REQUEST_METHOD'] ==='POST'){
     print_r($_POST);
+
+    $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollection.xhtml',
         CURLOPT_RETURNTRANSFER => true,
@@ -10,7 +12,7 @@
         CURLOPT_FOLLOWLOCATION => true,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => 'POST',
-        CURLOPT_POSTFIELDS =>'javax.faces.partial.ajax=true&javax.faces.source=ib_state&javax.faces.partial.execute=ib_state&javax.faces.partial.render=operation_code&javax.faces.behavior.event=change&javax.faces.partial.event=change&master_Layout_form=master_Layout_form&ib_state_focus=&ib_state_input=MH&operation_code_focus=&operation_code_input=-1&javax.faces.ViewState=1399913001236130417%3A6625332671049041109',
+        CURLOPT_POSTFIELDS =>'javax.faces.partial.ajax='.$_POST['javax_faces_partial_ajax'].'&javax.faces.source='.$_POST['javax_faces_source'].'&javax.faces.partial.execute='.$_POST['javax_faces_partial_execute'].'&javax.faces.partial.render='.$_POST['javax_faces_partial_render'].'&javax.faces.behavior.event='.$_POST['javax_faces_behavior_event'].'&javax.faces.partial.event='.$_POST['javax_faces_partial_event'].'&master_Layout_form=master_Layout_form&ib_state_focus=&ib_state_input=MH&operation_code_focus=&operation_code_input=-1&javax.faces.ViewState=1399913001236130417%3A6625332671049041109',
         CURLOPT_HTTPHEADER => array(
           'Accept: application/xml, text/xml, */*; q=0.01',
           'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8,mt;q=0.7,es;q=0.6,gu;q=0.5',
