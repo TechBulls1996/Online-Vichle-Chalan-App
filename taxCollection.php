@@ -39,7 +39,7 @@
       echo $response;
 } else {
  include_once('./includes/header.php') ?>
- <form id="master_Layout_form" name="master_Layout_form" method="post" action="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollection.xhtml" enctype="application/x-www-form-urlencoded">
+ <form id="master_Layout_form" name="master_Layout_form" method="post" action="/taxCollection.php" enctype="application/x-www-form-urlencoded">
 
 <div>
      <div id="popup" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container center-position">
