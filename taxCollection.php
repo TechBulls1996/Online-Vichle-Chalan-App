@@ -54,7 +54,15 @@
             <div id="j_idt41" class="ui-messages ui-widget" aria-live="polite"></div>
             <button id="j_idt42" name="j_idt42" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){mojarra.ab('j_idt42',event,'click',0,'publicsignup popup')},function(event){PrimeFaces.ab({s:&quot;j_idt42&quot;,f:&quot;master_Layout_form&quot;,onco:function(xhr,status,args){PF('dlg1').hide();;}});return false;}]);" type="submit"><span class="ui-button-text ui-c">Ok</span></button>
 
-            <script id="j_idt42_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt42",{id:"j_idt42",behaviors:{click:function(ext,event) {mojarra.ab('j_idt42',event,'click',0,'publicsignup popup',{'CLIENT_BEHAVIOR_RENDERING_MODE':'UNOBSTRUSIVE'})}}});});</script>
+            <script id="j_idt42_s" type="text/javascript">
+            $(function(){
+                PrimeFaces.cw("CommandButton","widget_j_idt42",{id:"j_idt42",behaviors:{
+                    click:function(ext,event) {mojarra.ab('j_idt42',event,'click',0,'publicsignup popup',{'CLIENT_BEHAVIOR_RENDERING_MODE':'UNOBSTRUSIVE'})
+                }
+              }
+             });
+            });    
+           </script>
         </div>
     </div>
     <script id="popup_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","dlg1",{id:"popup",draggable:false,modal:true});});</script> 
@@ -83,7 +91,10 @@
                                 </div> 
                             </div>
                             <div class="ui-grid-row top-space">
-                                <div class="ui-grid-col-12 center-position"><button id="j_idt51" name="j_idt51" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.ab({s:&quot;j_idt51&quot;,f:&quot;master_Layout_form&quot;,onst:function(cfg){PF('masterLayoutVar').show();;},onsu:function(data,status,xhr){PF('masterLayoutVar').hide();;},pa:[{name:&quot;PAYMENT_TYPE&quot;,value:&quot;ONLINE&quot;}]});return false;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-seek-next"></span><span class="ui-button-text ui-c">Go</span></button><script id="j_idt51_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt51",{id:"j_idt51"});});</script>
+                                <div class="ui-grid-col-12 center-position">
+                                    <button id="j_idt51" name="j_idt51" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="submitForm(e)" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-seek-next"></span><span class="ui-button-text ui-c">Go</span></button>
+                                    
+                                   
                                 </div>
                             </div></div></div><script id="publicsignup_s" type="text/javascript">$(function(){PrimeFaces.cw("Panel","widget_publicsignup",{id:"publicsignup"});});</script><br><div id="j_idt55" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="font-size: 11pt;" data-widget="widget_j_idt55"><div id="j_idt55_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Follow these steps to initiate tax payment...</span></div><div id="j_idt55_content" class="ui-panel-content ui-widget-content">
                             <ol>
@@ -112,6 +123,16 @@
         </div>
     </div>
 </form>
+<script id="j_idt51_s" type="text/javascript">                                    
+document.getElementById('master_Layout_form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  // Change the form's action
+  this.action = '/taxCollectionMainOnline.php';
+  // Submit the form
+  this.submit();
+});                                 
+</script>
 <?php 
 include_once('./includes/footer.php'); 
 }
