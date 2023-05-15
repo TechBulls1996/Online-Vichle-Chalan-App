@@ -1,5 +1,6 @@
 <?php
 include_once 'connection.php';
+include_once '../helpers/constant.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
