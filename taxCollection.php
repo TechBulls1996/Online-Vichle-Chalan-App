@@ -94,7 +94,11 @@ echo '<option value="'.$code.'" data-escape="true">'.$state.'</option>';
                                    
                                 </select></div><label id="ib_state_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                 
-                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div><div id="ib_state_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-filter-container"><input class="ui-selectonemenu-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" id="ib_state_filter" name="ib_state_filter" type="text" autocomplete="off"><span class="ui-icon ui-icon-search"></span>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                    <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                </div>
+                                <div id="ib_state_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-filter-container">
+                                    <input class="ui-selectonemenu-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" id="ib_state_filter" name="ib_state_filter" type="text" autocomplete="off"><span class="ui-icon ui-icon-search"></span>
                                </div>
                                <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                
@@ -102,8 +106,6 @@ echo '<option value="'.$code.'" data-escape="true">'.$state.'</option>';
                                   
                                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select State---" tabindex="-1" role="option">---Select State---</li>
 <?php
-$states = file_get_contents('./assets/json/states.json');
-$data = json_decode($states, true);
 // Access the data
 foreach ($data as $state => $code) {
 echo '<li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="'.$state.'" tabindex="-1" role="option">'.$state.'</li>';
