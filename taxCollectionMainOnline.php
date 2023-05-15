@@ -104,7 +104,7 @@ print_r($_POST);
                                         <input id="ib_state_focus" name="ib_state_focus" type="text" autocomplete="off" aria-expanded="false" aria-required="true">
                                     </div>
                                 <div class="ui-helper-hidden-accessible">
-                                <select id="ib_state_input" name="ib_state_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;ib_state&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;ib_state&quot;,u:&quot;operation_code&quot;});"><option value="-1" data-escape="true">---Select State---</option>
+                                <select id="ib_vehicle_input" name="ib_vehicle_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;ib_vehicle&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;ib_vehicle&quot;,u:&quot;operation_code&quot;});"><option value="-1" data-escape="true">---Select Vehicle Permit Type---</option>
                                     <?php
                                     
                                     // Access the data
@@ -114,19 +114,19 @@ print_r($_POST);
                                     ?>
                                    
                                 </select>
-                               </div><label id="ib_state_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                               </div><label id="ib_vehicle_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                 
-                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                <div class="ui-selectonemenu-trigger ui-vehicle-default ui-corner-right">
                                     <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
                                 </div>
-                                <div id="ib_state_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-filter-container">
-                                    <input class="ui-selectonemenu-filter ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" id="ib_state_filter" name="ib_state_filter" type="text" autocomplete="off"><span class="ui-icon ui-icon-search"></span>
+                                <div id="ib_vehicle_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay"><div class="ui-selectonemenu-filter-container">
+                                    <input class="ui-selectonemenu-filter ui-inputfield ui-inputtext ui-widget ui-vehicle-default ui-corner-all" id="ib_vehicle_filter" name="ib_vehiclee_filter" type="text" autocomplete="off"><span class="ui-icon ui-icon-search"></span>
                                </div>
                                <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                
-                               <ul id="ib_state_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
+                               <ul id="ib_vehicle_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                   
-                               <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select State---" tabindex="-1" role="option">---Select State---</li>
+                               <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select Vehicle---" tabindex="-1" role="option">---Select Vehicle Permit Type---</li>
                                 <?php
                                 // Access the data
                                 foreach ($VEHICLE_TYPE as $key => $val) {
@@ -135,11 +135,11 @@ print_r($_POST);
                                 ?>
                                 
                               </ul>
-                             </div></div></div><script id="ib_state_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_ib_state",{id:"ib_state",appendTo:"@(body)",filter:true,behaviors:{change:function(ext,event) {PrimeFaces.ab({s:"ib_state",e:"change",f:"master_Layout_form",p:"ib_state",u:"operation_code"},ext);}}});});</script>
+                             </div></div></div><script id="ib_vehicle_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_ib_vehicle",{id:"ib_vehicle",appendTo:"@(body)",filter:true,behaviors:{change:function(ext,event) {PrimeFaces.ab({s:"ib_vehicle",e:"change",f:"master_Layout_form",p:"ib_vehicle",u:"operation_code"},ext);}}});});</script>
                         </div>
             <div class="ui-grid-col-6">
                 <label class="field-label resp-label-section"><label id="j_idt634" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
-                </label><div id="j_idt636" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt636_items" style="min-width: 338px;"><div class="ui-helper-hidden-accessible"><input id="j_idt636_focus" name="j_idt636_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt636_0" aria-describedby="j_idt636_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt636_input" name="j_idt636_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt636&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Vehicle Type---</option><option value="1" data-escape="true">CONTRACT CARRIAGE/PASSENGER VEHICLES</option><option value="2" data-escape="true">PRIVATE SERVICE VEHICLE</option><option value="3" data-escape="true">GOODS VEHICLE</option><option value="4" data-escape="true">STAGE CARRIAGE</option><option value="9" data-escape="true">CONSTRUCTION EQUIPMENT VEHICLE</option></select></div><label id="j_idt636_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Vehicle Type---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
+                </label><div id="j_idt636" class="ui-selectonemenu ui-widget ui-vehicle-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt636_items" style="min-width: 338px;"><div class="ui-helper-hidden-accessible"><input id="j_idt636_focus" name="j_idt636_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt636_0" aria-describedby="j_idt636_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt636_input" name="j_idt636_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt636&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Vehicle Type---</option><option value="1" data-escape="true">CONTRACT CARRIAGE/PASSENGER VEHICLES</option><option value="2" data-escape="true">PRIVATE SERVICE VEHICLE</option><option value="3" data-escape="true">GOODS VEHICLE</option><option value="4" data-escape="true">STAGE CARRIAGE</option><option value="9" data-escape="true">CONSTRUCTION EQUIPMENT VEHICLE</option></select></div><label id="j_idt636_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Vehicle Type---</label><div class="ui-selectonemenu-trigger ui-vehicle-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
             </div>
             <div class="ui-grid-col-6">
                 <label class="field-label resp-label-section"><label id="j_idt640" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Class</label>
