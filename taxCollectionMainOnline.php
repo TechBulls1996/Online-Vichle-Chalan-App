@@ -1,5 +1,8 @@
 <?php
 include_once('./includes/header.php');
+$json_states = file_get_contents('./assets/json/states.json');
+$states = array_flip(json_decode($json_states, true));
+
 print_r($_POST); 
 ?>
 
@@ -7,7 +10,7 @@ print_r($_POST);
         <div class="container-fluid">
             <div class="ui-grid ui-grid-responsive">
                 <div class="ui-grid-row top-space center-position contents-Space">
-                    <h1 class="header-main"><label id="j_idt41" class="ui-outputlabel ui-widget header-main" style="color: #154281!important;font-weight: bold!important;">BORDER TAX PAYMENT FOR ENTRY INTO</label><span class="red"> HARYANA</span></h1>
+                    <h1 class="header-main"><label id="j_idt41" class="ui-outputlabel ui-widget header-main" style="color: #154281!important;font-weight: bold!important;">BORDER TAX PAYMENT FOR ENTRY INTO</label><span class="red"> <?= @$states[$_POST['ib_state_input']] ?></span></h1>
                 </div>
                 <div class="ui-grid-row">
                     <div class="ui-grid-col-12 center-position contents-Space">

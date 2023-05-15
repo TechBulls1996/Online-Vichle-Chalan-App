@@ -106,7 +106,7 @@ $states = file_get_contents('./assets/json/states.json');
 $data = json_decode($states, true);
 // Access the data
 foreach ($data as $state => $code) {
-echo '<li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="'.$state.'" tabindex="-1" role="option">'.$state.'</li><';
+echo '<li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="'.$state.'" tabindex="-1" role="option">'.$state.'</li>';
 }
 ?>
                                 
