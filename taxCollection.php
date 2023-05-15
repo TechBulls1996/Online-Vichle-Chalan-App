@@ -101,7 +101,14 @@ echo '<option value="'.$code.'" data-escape="true">'.$state.'</option>';
                                <ul id="ib_state_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                   
                                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select State---" tabindex="-1" role="option">---Select State---</li>
-                               <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="BIHAR" tabindex="-1" role="option">BIHAR</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CHHATTISGARH" tabindex="-1" role="option">CHHATTISGARH</li>
+<?php
+$states = file_get_contents('./assets/json/states.json');
+$data = json_decode($states, true);
+// Access the data
+foreach ($data as $state => $code) {
+echo '<li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="'.$state.'" tabindex="-1" role="option">'.$state.'</li><';
+}
+?>
                                 
                               </ul></div></div></div><script id="ib_state_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_ib_state",{id:"ib_state",appendTo:"@(body)",filter:true,behaviors:{change:function(ext,event) {PrimeFaces.ab({s:"ib_state",e:"change",f:"master_Layout_form",p:"ib_state",u:"operation_code"},ext);}}});});</script>
                                 </div> 
