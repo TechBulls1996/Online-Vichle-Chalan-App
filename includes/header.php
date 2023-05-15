@@ -1,6 +1,9 @@
 <?php
 include_once 'connection.php';
 include_once '../helpers/constant.php';
+echo __FILE__;
+echo __DIR__;
+echo __DIR__.'../helpers/constant.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
