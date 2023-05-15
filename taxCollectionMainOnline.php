@@ -5,7 +5,97 @@ $states = json_decode($json_states, true);
 $states_reverse = array_flip($states);
 print_r($_POST); 
 ?>
-Barrier---</option><option value="37" data-escape="true">AMBALA</option><option value="61" data-escape="true">BHIWANI</option><option value="84" data-escape="true">CHARKHI DADRI</option><option value="38" data-escape="true">FARIDABAD</option><option value="62" data-escape="true">FATEHABAD</option><option value="55" data-escape="true">GURUGRAM</option><option value="39" data-escape="true">HISAR</option><option value="63" data-escape="true">JHAJJAR</option><option value="56" data-escape="true">JIND</option><option value="64" data-escape="true">KAITHAL</option><option value="45" data-escape="true">KARNAL</option><option value="65" data-escape="true">KURUKSHETRA</option><option value="66" data-escape="true">MAHENDRAGARH</option><option value="74" data-escape="true">NUH</option><option value="73" data-escape="true">PALWAL</option><option value="68" data-escape="true">PANCHKULA</option><option value="67" data-escape="true">PANIPAT</option><option value="47" data-escape="true">REWARI</option><option value="46" data-escape="true">ROHTAK</option><option value="57" data-escape="true">SIRSA</option><option value="69" data-escape="true">SONIPAT</option><option value="58" data-escape="true">YAMUNA NAGAR</option></select></div><label id="j_idt662_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select District/Barrier---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
+
+<div>
+        <div class="container-fluid">
+            <div class="ui-grid ui-grid-responsive">
+                <div class="ui-grid-row top-space center-position contents-Space">
+                    <h1 class="header-main"><label id="j_idt41" class="ui-outputlabel ui-widget header-main" style="color: #154281!important;font-weight: bold!important;">BORDER TAX PAYMENT FOR ENTRY INTO</label><span class="red"> <?= @$states_reverse[$_POST['ib_state_input']] ?></span></h1>
+                </div>
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12 center-position contents-Space">
+                    </div>
+                </div>
+                <div class="ui-grid-row top-space">
+                    <div class="ui-grid-col-1 resp-blank-height"></div>
+                    <div class="ui-grid-col-10"><div id="hrtaxcollection" class="ui-panel ui-widget ui-widget-content ui-corner-all bottom-space" data-widget="widget_hrtaxcollection"><div id="hrtaxcollection_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">Tax Payment Details</span></div><div id="hrtaxcollection_content" class="ui-panel-content ui-widget-content">
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt611" class="ui-outputlabel ui-widget field-label-mandate">Vehicle No.</label>
+                </label><input id="j_idt613" name="j_idt613" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" onkeypress="return AlphaOnly(event, 'abcdefghijklmnopqrstuvwxyz0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+            </div>
+            <div class="ui-grid-col-6">
+                <div class="ui-grid-row">
+                    <div class="ui-grid-col-12 top_mar1 mar-left5"><button id="j_idt615" name="j_idt615" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.ab({s:&quot;j_idt615&quot;,f:&quot;master_Layout_form&quot;,u:&quot;hrtaxcollection popup&quot;,onst:function(cfg){PF('masterLayoutVar').show();;},onsu:function(data,status,xhr){PF('masterLayoutVar').hide();;}});return false;" title="Click to get owner and vehicle details from Vahan 4." type="submit" role="button" aria-disabled="false"><span class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-s"></span><span class="ui-button-text ui-c">Get Details</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt617" class="ui-outputlabel ui-widget field-label-mandate">Chassis No.</label>
+                </label><input id="j_idt619" name="j_idt619" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state" aria-disabled="false" autocomplete="off" maxlength="30" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-readonly="false">
+            </div>   
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt621" class="ui-outputlabel ui-widget field-label-mandate">Owner Name</label>
+                </label><input id="j_idt623" name="j_idt623" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state" aria-disabled="false" autocomplete="off" maxlength="50" onkeypress="return AlphaWithSpaceOnly(event, '. ');" onkeyup="makeCaps(this);" role="textbox" aria-readonly="false">
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt625" class="ui-outputlabel ui-widget field-label-mandate">Mobile No.</label>
+                </label><input id="mobileno" name="mobileno" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" placeholder="SMS about payment will be sent to this number." title="SMS about payment will be sent to this number." onkeypress="return NumericOnly(event, '');" role="textbox" aria-disabled="false" aria-readonly="false">
+            </div>   
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt628" class="ui-outputlabel ui-widget field-label-mandate">From State</label>
+                </label>
+                <div id="j_idt201" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt201_items" style="min-width: 178px;"><div class="ui-helper-hidden-accessible"><input id="j_idt201_focus" name="j_idt201_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt201_32" aria-describedby="j_idt201_32" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt201_input" name="j_idt201_input" tabindex="-1" aria-hidden="true"><option value="-1" data-escape="true">---Select State---</option>
+<?php
+// Access the data
+foreach ($states as $state => $code) {
+echo '<option value="'.$code.'" data-escape="true">'.$state.'</option>';
+}
+?>
+              </select></div>
+              <label id="j_idt201_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">UTTAR PRADESH</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>
+
+               
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt634" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
+                </label><div id="j_idt636" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt636_items" style="min-width: 338px;"><div class="ui-helper-hidden-accessible"><input id="j_idt636_focus" name="j_idt636_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt636_0" aria-describedby="j_idt636_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt636_input" name="j_idt636_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt636&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Vehicle Type---</option><option value="1" data-escape="true">CONTRACT CARRIAGE/PASSENGER VEHICLES</option><option value="2" data-escape="true">PRIVATE SERVICE VEHICLE</option><option value="3" data-escape="true">GOODS VEHICLE</option><option value="4" data-escape="true">STAGE CARRIAGE</option><option value="9" data-escape="true">CONSTRUCTION EQUIPMENT VEHICLE</option></select></div><label id="j_idt636_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Vehicle Type---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
+            </div>
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt640" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Class</label>
+                </label><div id="j_idt642" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt642_items" style="min-width: 175px;"><div class="ui-helper-hidden-accessible"><input id="j_idt642_focus" name="j_idt642_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt642_0" aria-describedby="j_idt642_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt642_input" name="j_idt642_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt642&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Vehicle Class---</option></select></div><label id="j_idt642_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Vehicle Class---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div> 
+            </div> 
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="lbl_seat_cap" class="ui-outputlabel ui-widget field-label-mandate">Seating Capacity (Excluding Driver)</label>
+                </label><input id="txt_seat_cap" name="txt_seat_cap" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="2" onkeypress="return NumericOnly(event, '');" role="textbox" aria-disabled="false" aria-readonly="false">
+            </div> 
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt648" class="ui-outputlabel ui-widget field-label-mandate">Service Type</label>
+                </label><div id="cmb_service_type" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="cmb_service_type_items" style="min-width: 172px;"><div class="ui-helper-hidden-accessible"><input id="cmb_service_type_focus" name="cmb_service_type_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="cmb_service_type_0" aria-describedby="cmb_service_type_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="cmb_service_type_input" name="cmb_service_type_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_service_type&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Service Type---</option></select></div><label id="cmb_service_type_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Service Type---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="lbl_distance" class="ui-outputlabel ui-widget">Distance(In KM)<font color="#FF0000"> *</font></label>
+                </label><input id="txt_distance" name="txt_distance" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" onkeypress="return NumericOnly(event, '');" role="textbox" aria-disabled="false" aria-readonly="false">
+            </div> 
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt655" class="ui-outputlabel ui-widget field-label-mandate">Tax Mode</label>
+                </label><div id="cmb_payment_mode" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="cmb_payment_mode_items" style="min-width: 185px;"><div class="ui-helper-hidden-accessible"><input id="cmb_payment_mode_focus" name="cmb_payment_mode_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="cmb_payment_mode_0" aria-describedby="cmb_payment_mode_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="cmb_payment_mode_input" name="cmb_payment_mode_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_payment_mode&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Payment Mode---</option></select></div><label id="cmb_payment_mode_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Payment Mode---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
+            </div>
+        </div>
+        <div class="ui-grid-row">
+            <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt660" class="ui-outputlabel ui-widget field-label-mandate">Border/Barrier District through Entering</label>
+                </label><div id="j_idt662" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt662_items" style="min-width: 179.5px;"><div class="ui-helper-hidden-accessible"><input id="j_idt662_focus" name="j_idt662_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt662_0" aria-describedby="j_idt662_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt662_input" name="j_idt662_input" tabindex="-1" aria-hidden="true"><option value="-1" data-escape="true">---Select District/Barrier---</option><option value="37" data-escape="true">AMBALA</option><option value="61" data-escape="true">BHIWANI</option><option value="84" data-escape="true">CHARKHI DADRI</option><option value="38" data-escape="true">FARIDABAD</option><option value="62" data-escape="true">FATEHABAD</option><option value="55" data-escape="true">GURUGRAM</option><option value="39" data-escape="true">HISAR</option><option value="63" data-escape="true">JHAJJAR</option><option value="56" data-escape="true">JIND</option><option value="64" data-escape="true">KAITHAL</option><option value="45" data-escape="true">KARNAL</option><option value="65" data-escape="true">KURUKSHETRA</option><option value="66" data-escape="true">MAHENDRAGARH</option><option value="74" data-escape="true">NUH</option><option value="73" data-escape="true">PALWAL</option><option value="68" data-escape="true">PANCHKULA</option><option value="67" data-escape="true">PANIPAT</option><option value="47" data-escape="true">REWARI</option><option value="46" data-escape="true">ROHTAK</option><option value="57" data-escape="true">SIRSA</option><option value="69" data-escape="true">SONIPAT</option><option value="58" data-escape="true">YAMUNA NAGAR</option></select></div><label id="j_idt662_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select District/Barrier---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
             </div>
             <div class="ui-grid-col-3">
                 <label class="field-label resp-label-section"><label id="j_idt666" class="ui-outputlabel ui-widget field-label-mandate">Tax From Date</label>
@@ -82,8 +172,7 @@ Barrier---</option><option value="37" data-escape="true">AMBALA</option><option 
                 </div>
             </div>
         </div>
-</div>
-
+            </div>
 
 <?php 
 include_once('./includes/footer.php'); 
