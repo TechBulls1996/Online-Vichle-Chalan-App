@@ -83,7 +83,13 @@
                                 <div class="ui-grid-col-5">
                                     <label class="field-label resp-label-section">
                                         <h3 class="top-space">Select Visiting State Name</h3>
-                                    </label><div id="ib_state" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false"><div class="ui-helper-hidden-accessible"><input id="ib_state_focus" name="ib_state_focus" type="text" autocomplete="off" aria-expanded="false" aria-required="true"></div><div class="ui-helper-hidden-accessible"><select id="ib_state_input" name="ib_state_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;ib_state&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;ib_state&quot;,u:&quot;operation_code&quot;});"><option value="-1" data-escape="true">---Select State---</option>
+                                    </label>
+                                <div id="ib_state" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
+                                    <div class="ui-helper-hidden-accessible">
+                                        <input id="ib_state_focus" name="ib_state_focus" type="text" autocomplete="off" aria-expanded="false" aria-required="true">
+                                    </div>
+                                <div class="ui-helper-hidden-accessible">
+                                <select id="ib_state_input" name="ib_state_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;ib_state&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;ib_state&quot;,u:&quot;operation_code&quot;});"><option value="-1" data-escape="true">---Select State---</option>
                                     <?php
                                     $states = file_get_contents('./assets/json/states.json');
                                     $data = json_decode($states, true);
@@ -93,7 +99,8 @@
                                     }
                                     ?>
                                    
-                                </select></div><label id="ib_state_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                                </select>
+                               </div><label id="ib_state_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                 
                                 <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                     <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
@@ -115,7 +122,7 @@
                                 
                               </ul>
                              </div></div></div><script id="ib_state_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_ib_state",{id:"ib_state",appendTo:"@(body)",filter:true,behaviors:{change:function(ext,event) {PrimeFaces.ab({s:"ib_state",e:"change",f:"master_Layout_form",p:"ib_state",u:"operation_code"},ext);}}});});</script>
-                                </div> 
+                        </div> 
 
                                 <div class="ui-grid-col-5">
                                     <label class="field-label resp-label-section">

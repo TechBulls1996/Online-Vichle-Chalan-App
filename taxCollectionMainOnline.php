@@ -47,9 +47,7 @@ print_r($_POST);
                 </label><input id="mobileno" name="mobileno" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" placeholder="SMS about payment will be sent to this number." title="SMS about payment will be sent to this number." onkeypress="return NumericOnly(event, '');" role="textbox" aria-disabled="false" aria-readonly="false">
             </div>  
             <div class="ui-grid-col-5">
-                                    <label class="field-label resp-label-section">
-                                        <h3 class="top-space">Select Visiting State Name</h3>
-                                    </label>
+                                 <label class="field-label resp-label-section"><label id="j_idt628" class="ui-outputlabel ui-widget field-label-mandate">From State</label>
                                 <div id="ib_state" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
                                     <div class="ui-helper-hidden-accessible">
                                         <input id="ib_state_focus" name="ib_state_focus" type="text" autocomplete="off" aria-expanded="false" aria-required="true">
@@ -89,21 +87,6 @@ print_r($_POST);
                               </ul>
                              </div></div></div><script id="ib_state_s" type="text/javascript">$(function(){PrimeFaces.cw("SelectOneMenu","widget_ib_state",{id:"ib_state",appendTo:"@(body)",filter:true,behaviors:{change:function(ext,event) {PrimeFaces.ab({s:"ib_state",e:"change",f:"master_Layout_form",p:"ib_state",u:"operation_code"},ext);}}});});</script>
                         </div>  
-            <div class="ui-grid-col-6">
-                <label class="field-label resp-label-section"><label id="j_idt628" class="ui-outputlabel ui-widget field-label-mandate">From State</label>
-                </label>
-                <div id="j_idt201" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt201_items" style="min-width: 178px;"><div class="ui-helper-hidden-accessible"><input id="j_idt201_focus" name="j_idt201_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt201_32" aria-describedby="j_idt201_32" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt201_input" name="j_idt201_input" tabindex="-1" aria-hidden="true"><option value="-1" data-escape="true">---Select State---</option>
-                    <?php
-                    // Access the data
-                    foreach ($states as $state => $code) {
-                    echo '<option value="'.$code.'" data-escape="true">'.$state.'</option>';
-                    }
-                    ?>
-              </select></div>
-              <label id="j_idt201_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">UTTAR PRADESH</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>
-
-               
-            </div>
             
         </div>
         <div class="ui-grid-row">
