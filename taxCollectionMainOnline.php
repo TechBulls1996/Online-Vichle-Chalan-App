@@ -46,7 +46,7 @@ print_r($_POST);
                 <label class="field-label resp-label-section"><label id="j_idt625" class="ui-outputlabel ui-widget field-label-mandate">Mobile No.</label>
                 </label><input id="mobileno" name="mobileno" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" placeholder="SMS about payment will be sent to this number." title="SMS about payment will be sent to this number." onkeypress="return NumericOnly(event, '');" role="textbox" aria-disabled="false" aria-readonly="false">
             </div>  
-            <div class="ui-grid-col-5">
+            <div class="ui-grid-col-6">
                                  <label class="field-label resp-label-section"><label id="j_idt628" class="ui-outputlabel ui-widget field-label-mandate">From State</label>
                                 <div id="ib_state" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
                                     <div class="ui-helper-hidden-accessible">
