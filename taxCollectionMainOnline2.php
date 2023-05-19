@@ -972,7 +972,7 @@ print_r($_POST);
             </div>
         </div>
     </div>
-    <div id="j_idt47" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt48" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div>
+    <!-- <div id="j_idt47" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt48" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div>
     <script id="j_idt47_s" type="text/javascript">
         $(function() {
             PrimeFaces.cw("BlockUI", "masterLayoutVar", {
@@ -980,5 +980,7 @@ print_r($_POST);
                 block: "masterlaoyoutbody"
             });
         });
-    </script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8478847669435243492:-1765128807672062895" autocomplete="off" />
+    </script>
+     -->
+    <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8478847669435243492:-1765128807672062895" autocomplete="off" />
 </form>
