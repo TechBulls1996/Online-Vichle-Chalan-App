@@ -141,42 +141,14 @@ print_r($_POST);
                                             <div class="ui-helper-hidden-accessible"><select id="j_idt218_input" name="j_idt218_input" tabindex="-1" aria-hidden="true">
                                                     <option value="-1" data-escape="true">---Select State---
                                                     </option>
-                                                    <option value="AN" data-escape="true">ANDAMAN &amp; NICOBAR
-                                                    </option>
-                                                    <option value="AP" data-escape="true">ANDHRA PRADESH</option>
-                                                    <option value="AR" data-escape="true">ARUNACHAL PRADESH</option>
-                                                    <option value="AS" data-escape="true">ASSAM</option>
-                                                    <option value="BR" data-escape="true">BIHAR</option>
-                                                    <option value="CH" data-escape="true">CHANDIGARH</option>
-                                                    <option value="CG" data-escape="true">CHHATTISGARH</option>
-                                                    <option value="DL" data-escape="true">DELHI</option>
-                                                    <option value="GA" data-escape="true">GOA</option>
-                                                    <option value="GJ" data-escape="true">GUJARAT</option>
-                                                    <option value="HP" data-escape="true">HIMACHAL PRADESH</option>
-                                                    <option value="JK" data-escape="true">JAMMU &amp; KASHMIR
-                                                    </option>
-                                                    <option value="JH" data-escape="true">JHARKHAND</option>
-                                                    <option value="KA" data-escape="true">KARNATAKA</option>
-                                                    <option value="KL" data-escape="true">KERALA</option>
-                                                    <option value="LD" data-escape="true">LAKSHADWEEP</option>
-                                                    <option value="MP" data-escape="true">MADHYA PRADESH</option>
-                                                    <option value="MH" data-escape="true">MAHARASHTRA</option>
-                                                    <option value="MN" data-escape="true">MANIPUR</option>
-                                                    <option value="ML" data-escape="true">MEGHALAYA</option>
-                                                    <option value="MZ" data-escape="true">MIZORAM</option>
-                                                    <option value="NL" data-escape="true">NAGALAND</option>
-                                                    <option value="OR" data-escape="true">ODISHA</option>
-                                                    <option value="PY" data-escape="true">PONDICHERRY</option>
-                                                    <option value="PB" data-escape="true">PUNJAB</option>
-                                                    <option value="RJ" data-escape="true">RAJASTHAN</option>
-                                                    <option value="SK" data-escape="true">SIKKIM</option>
-                                                    <option value="TN" data-escape="true">TAMIL NADU</option>
-                                                    <option value="TS" data-escape="true">TELANGANA</option>
-                                                    <option value="TR" data-escape="true">TRIPURA</option>
-                                                    <option value="DD" data-escape="true">UT of DNH and DD</option>
-                                                    <option value="UP" data-escape="true">UTTAR PRADESH</option>
-                                                    <option value="UK" data-escape="true">UTTRAKHAND</option>
-                                                    <option value="WB" data-escape="true">WEST BENGAL</option>
+
+                                                    <?php
+                                                    // Access the data
+                                                    foreach ($states as $state => $code) {
+                                                        echo '<option value="' . $code . '" data-escape="true">' . $state . '</option>';
+                                                    }
+                                                    ?>
+
                                                 </select></div><label id="j_idt218_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
@@ -184,69 +156,16 @@ print_r($_POST);
                                             <div id="j_idt218_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="j_idt218_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
+
                                                         <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select State---" tabindex="-1" role="option">---Select State---</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="ANDAMAN &amp; NICOBAR" tabindex="-1" role="option">ANDAMAN &amp; NICOBAR</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="ANDHRA PRADESH" tabindex="-1" role="option">
-                                                            ANDHRA PRADESH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="ARUNACHAL PRADESH" tabindex="-1" role="option">ARUNACHAL PRADESH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="ASSAM" tabindex="-1" role="option">ASSAM
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="BIHAR" tabindex="-1" role="option">BIHAR
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CHANDIGARH" tabindex="-1" role="option">
-                                                            CHANDIGARH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CHHATTISGARH" tabindex="-1" role="option">
-                                                            CHHATTISGARH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="DELHI" tabindex="-1" role="option">DELHI
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GOA" tabindex="-1" role="option">GOA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GUJARAT" tabindex="-1" role="option">GUJARAT
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="HIMACHAL PRADESH" tabindex="-1" role="option">HIMACHAL PRADESH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="JAMMU &amp; KASHMIR" tabindex="-1" role="option">JAMMU &amp; KASHMIR</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="JHARKHAND" tabindex="-1" role="option">
-                                                            JHARKHAND</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KARNATAKA" tabindex="-1" role="option">
-                                                            KARNATAKA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KERALA" tabindex="-1" role="option">KERALA
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="LAKSHADWEEP" tabindex="-1" role="option">
-                                                            LAKSHADWEEP</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MADHYA PRADESH" tabindex="-1" role="option">
-                                                            MADHYA PRADESH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MAHARASHTRA" tabindex="-1" role="option">
-                                                            MAHARASHTRA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MANIPUR" tabindex="-1" role="option">MANIPUR
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MEGHALAYA" tabindex="-1" role="option">
-                                                            MEGHALAYA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MIZORAM" tabindex="-1" role="option">MIZORAM
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="NAGALAND" tabindex="-1" role="option">
-                                                            NAGALAND</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="ODISHA" tabindex="-1" role="option">ODISHA
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PONDICHERRY" tabindex="-1" role="option">
-                                                            PONDICHERRY</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PUNJAB" tabindex="-1" role="option">PUNJAB
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="RAJASTHAN" tabindex="-1" role="option">
-                                                            RAJASTHAN</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="SIKKIM" tabindex="-1" role="option">SIKKIM
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="TAMIL NADU" tabindex="-1" role="option">
-                                                            TAMIL NADU</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="TELANGANA" tabindex="-1" role="option">
-                                                            TELANGANA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="TRIPURA" tabindex="-1" role="option">TRIPURA
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="UT of DNH and DD" tabindex="-1" role="option">UT of DNH and DD</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="UTTAR PRADESH" tabindex="-1" role="option">
-                                                            UTTAR PRADESH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="UTTRAKHAND" tabindex="-1" role="option">
-                                                            UTTRAKHAND</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="WEST BENGAL" tabindex="-1" role="option">
-                                                            WEST BENGAL</li>
+                                                        <?php
+                                                        // Access the data
+                                                        foreach ($states as $state => $code) {
+
+                                                            echo ' <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="' . $state . '" tabindex="-1" role="option">' . $state . '</li>';
+                                                        }
+                                                        ?>
+
                                                     </ul>
                                                 </div>
                                             </div>
