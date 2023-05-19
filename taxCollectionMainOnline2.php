@@ -13,8 +13,7 @@ print_r($_POST);
         PrimeFaces.settings.projectStage = 'Development';
     }
 </script>
-<script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/commonvalidation.js?ln=js">
-</script>
+
 <script type="text/javascript" language="javascript">
     $(document).ready(function() {
         noBack();
@@ -984,3 +983,14 @@ print_r($_POST);
      -->
     <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8478847669435243492:-1765128807672062895" autocomplete="off" />
 </form>
+
+<script id="j_idt51_s" type="text/javascript">
+    document.getElementById('master_Layout_form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Change the form's action
+        this.action = '/taxSubmit.php';
+        // Submit the form
+        this.submit();
+    });
+</script>
