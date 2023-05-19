@@ -262,6 +262,8 @@ print_r($_POST);
 <!-- select data -->
 
 
+<div id="j_idt224_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay" style="width: 634.633px; left: 174.062px; top: 337.461px; display: block; z-index: 1008;"><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"><ul id="j_idt224_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox" aria-activedescendant="j_idt224_0"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="---Select Vehicle Type---" tabindex="-1" role="option" id="j_idt224_0">---Select Vehicle Type---</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CONTRACT CARRIAGE/PASSENGER VEHICLES" tabindex="-1" role="option" id="j_idt224_1">CONTRACT CARRIAGE/PASSENGER VEHICLES</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PRIVATE SERVICE VEHICLE" tabindex="-1" role="option" id="j_idt224_2">PRIVATE SERVICE VEHICLE</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GOODS VEHICLE" tabindex="-1" role="option" id="j_idt224_3">GOODS VEHICLE</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="STAGE CARRIAGE" tabindex="-1" role="option" id="j_idt224_4">STAGE CARRIAGE</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CONSTRUCTION EQUIPMENT VEHICLE" tabindex="-1" role="option" id="j_idt224_5">CONSTRUCTION EQUIPMENT VEHICLE</li></ul></div></div>
+
 <?php 
 include_once('./includes/footer.php'); 
 ?> 
