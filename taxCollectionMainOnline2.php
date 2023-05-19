@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/theme.css?ln=primefaces-checkposttheme" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/fa/font-awesome.css?ln=primefaces&amp;v=7.0" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/layout.css?ln=css" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/font-awesome.min.css?ln=css" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/grid-css.css?ln=css" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/css/all.css?ln=font-awesome-5.11.2" /><link type="text/css" rel="stylesheet" href="/checkpost/faces/javax.faces.resource/components.css?ln=primefaces&amp;v=7.0" /><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/core.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/components.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/jsf.js?ln=javax.faces&amp;stage=Development"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/theme.css?ln=primefaces-checkposttheme" /><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/fa/font-awesome.css?ln=primefaces&amp;v=7.0" /><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/layout.css?ln=css" /><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/font-awesome.min.css?ln=css" /><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/grid-css.css?ln=css" /><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/css/all.css?ln=font-awesome-5.11.2" /><link type="text/css" rel="stylesheet" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/components.css?ln=primefaces&amp;v=7.0" /><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/core.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/components.js?ln=primefaces&amp;v=7.0"></script><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jsf.js?ln=javax.faces&amp;stage=Development"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';PrimeFaces.settings.projectStage='Development';}</script>
         <title>Checkpost ~1~85</title>
-        <link rel="shortcut icon" type="image/x-icon" href="/checkpost/faces/javax.faces.resource/images/vahan-icon.png" sizes="16x16" /><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/js/bootstrap.js?ln=bootstrap-3.3.1"></script><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/commonvalidation.js?ln=js"></script><script type="text/javascript" src="/checkpost/faces/javax.faces.resource/login.js?ln=js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/images/vahan-icon.png" sizes="16x16" /><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/js/bootstrap.js?ln=bootstrap-3.3.1"></script><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/commonvalidation.js?ln=js"></script><script type="text/javascript" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/login.js?ln=js"></script>
         <script type="text/javascript" language="javascript">
             $(document).ready(function () {
                 noBack();
@@ -26,7 +26,7 @@
                 }
             }, 50);
         </script></head><body id="masterlaoyoutbody" onload="changeHashOnLoad();">
-<form id="master_Layout_form" name="master_Layout_form" method="post" action="/checkpost/faces/public/payment/TaxCollectionMainOnline.xhtml" enctype="application/x-www-form-urlencoded">
+<form id="master_Layout_form" name="master_Layout_form" method="post" action="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollectionMainOnline.xhtml" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="master_Layout_form" value="master_Layout_form" />
  
             <div class="container-fluid topbar-menu">
@@ -72,17 +72,17 @@
                 <div class="ui-grid ui-grid-responsive">
                     <div class="ui-grid-row">
                         <div class="ui-grid-col-2 left_logo">
-                            <a class="top-space inline-section"><img id="j_idt13" src="/checkpost/faces/javax.faces.resource/checkpost-logo.png?ln=images" alt="Check Post Logo" />
+                            <a class="top-space inline-section"><img id="j_idt13" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/checkpost-logo.png?ln=images" alt="Check Post Logo" />
                             </a>
                         </div>
                         <div class="ui-grid-col-8">
-                            <div class="heading_w center-position top-space"><img id="j_idt15" src="/checkpost/faces/javax.faces.resource/emblem-logo.png?ln=images" class="emblem-logo" alt="State Emblem of India" />
+                            <div class="heading_w center-position top-space"><img id="j_idt15" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/emblem-logo.png?ln=images" class="emblem-logo" alt="State Emblem of India" />
                                 <div class="font-bold text-welcome-heading welcome-heading-size text-uppercase">ministry of road transport and highways</div>
                                 <div class="font-bold text-welcome-heading welcome-sub-heading-size">Government of India</div>
                             </div>
                         </div>
                         <div class="ui-grid-col-2 right_logo">
-                            <a class="top-space inline-section"><img id="j_idt17" src="/checkpost/faces/javax.faces.resource/e-vahan-logo.png?ln=images" alt="e-Vahan Logo" />
+                            <a class="top-space inline-section"><img id="j_idt17" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/e-vahan-logo.png?ln=images" alt="e-Vahan Logo" />
                             </a>
                         </div>
                     </div>
@@ -99,27 +99,27 @@
                 </div>
                 <div class="collapse navbar-collapse navigation-background-nav" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="/checkpost/faces/login.xhtml"> <span class="glyphicon glyphicon-home"></span> Home </a>
+                        <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/login.xhtml"> <span class="glyphicon glyphicon-home"></span> Home </a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" rendered=""><span class="glyphicon glyphicon-user"></span> Border Tax Payment<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/checkpost/faces/public/payment/TaxCollection.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Tax Payment </a>
+                                <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollection.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Tax Payment </a>
                                 </li>
-                                <li><a href="/checkpost/faces/public/payment/ChecklTransactionStatus.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Check Pending Transaction</a>
+                                <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/ChecklTransactionStatus.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Check Pending Transaction</a>
                                 </li>
-                                <li><a href="/checkpost/faces/public/payment/ReverifyTransaction.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Reverify Failed Transaction </a>
+                                <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/ReverifyTransaction.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Reverify Failed Transaction </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" rendered=""><span class="glyphicon glyphicon-print"></span> Reports<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/checkpost/faces/public/reports/PaymentReceipt.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Print Payment Receipt</a>
+                                <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/public/reports/PaymentReceipt.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Print Payment Receipt</a>
                                 </li>
-                                <li><a href="/checkpost/faces/public/reports/PermitReceiptPrinting.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Print Permit Receipt</a>
+                                <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/public/reports/PermitReceiptPrinting.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Print Permit Receipt</a>
                                 </li>
-                                <li><a href="/checkpost/faces/public/reports/CheckReceiptDetails.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Check Receipt Details</a>
+                                <li><a href="https://checkpost.parivahan.gov.in/checkpost/faces/public/reports/CheckReceiptDetails.xhtml"><span class="glyphicon glyphicon-arrow-right"></span> Check Receipt Details</a>
                                 </li>
                             </ul>
                         </li>
@@ -294,6 +294,6 @@
                 </div>
             </div>
         </div>
-            </div><div id="j_idt47" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt48" src="/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div><script id="j_idt47_s" type="text/javascript">$(function(){PrimeFaces.cw("BlockUI","masterLayoutVar",{id:"j_idt47",block:"masterlaoyoutbody"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8478847669435243492:-1765128807672062895" autocomplete="off" />
+            </div><div id="j_idt47" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt48" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div><script id="j_idt47_s" type="text/javascript">$(function(){PrimeFaces.cw("BlockUI","masterLayoutVar",{id:"j_idt47",block:"masterlaoyoutbody"});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8478847669435243492:-1765128807672062895" autocomplete="off" />
 </form></body>
 </html>
