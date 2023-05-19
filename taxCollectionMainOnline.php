@@ -96,19 +96,7 @@ print_r($_POST);
         </div>
         <div class="ui-grid-row">
         <div class="ui-grid-col-6">
-                <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
-                </label><div id="j_idt224" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt224_items" style="min-width: 338px;"><div class="ui-helper-hidden-accessible"><input id="j_idt224_focus" name="j_idt224_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt224_0" aria-describedby="j_idt224_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt224_input" name="j_idt224_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt224&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Vehicle Type---</option>
-                <?php
-                
-                // Access the data
-                foreach ($VEHICLE_TYPE as $key => $val) {
-                echo '<option value="'.$val.'" data-escape="true">'.$val.'</option>';
-                }
-                ?>
-                </select></div><label id="j_idt224_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Vehicle Type---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
-            </div>   
-        <div class="ui-grid-col-6">
-            <label class="field-label resp-label-section">
+              <label class="field-label resp-label-section">
                 <label id="j_idt634" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
                 </label> 
                                 <div id="ib_state" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
@@ -261,8 +249,6 @@ print_r($_POST);
 </div>
 <!-- select data -->
 
-
-<div id="j_idt224_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay" style="width: 634.633px; left: 174.062px; top: 337.461px; display: block; z-index: 1008;"><div class="ui-selectonemenu-items-wrapper" style="max-height:200px"><ul id="j_idt224_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox" aria-activedescendant="j_idt224_0"><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="---Select Vehicle Type---" tabindex="-1" role="option" id="j_idt224_0">---Select Vehicle Type---</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CONTRACT CARRIAGE/PASSENGER VEHICLES" tabindex="-1" role="option" id="j_idt224_1">CONTRACT CARRIAGE/PASSENGER VEHICLES</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PRIVATE SERVICE VEHICLE" tabindex="-1" role="option" id="j_idt224_2">PRIVATE SERVICE VEHICLE</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GOODS VEHICLE" tabindex="-1" role="option" id="j_idt224_3">GOODS VEHICLE</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="STAGE CARRIAGE" tabindex="-1" role="option" id="j_idt224_4">STAGE CARRIAGE</li><li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CONSTRUCTION EQUIPMENT VEHICLE" tabindex="-1" role="option" id="j_idt224_5">CONSTRUCTION EQUIPMENT VEHICLE</li></ul></div></div>
 
 <?php 
 include_once('./includes/footer.php'); 
