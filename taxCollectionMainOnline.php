@@ -12,9 +12,7 @@ print_r($_POST);
         PrimeFaces.settings.locale = 'en_US';
         PrimeFaces.settings.projectStage = 'Development';
     }
-</script>
 
-<script type="text/javascript" language="javascript">
     $(document).ready(function() {
         noBack();
     });
@@ -75,7 +73,12 @@ print_r($_POST);
                                     </div>
                                     <div class="ui-grid-col-6">
                                         <div class="ui-grid-row">
-                                            <div class="ui-grid-col-12 top_mar1 mar-left5"><button id="j_idt203" name="j_idt203" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.ab({s:&quot;j_idt203&quot;,f:&quot;master_Layout_form&quot;,u:&quot;hrtaxcollection popup&quot;,onst:function(cfg){PF('masterLayoutVar').show();;},onsu:function(data,status,xhr){PF('masterLayoutVar').hide();;}});return false;" title="Click to get owner and vehicle details from Vahan 4." type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-s"></span><span class="ui-button-text ui-c">Get Details</span></button>
+                                            <div class="ui-grid-col-12 top_mar1 mar-left5">
+                                                <button id="j_idt203" name="j_idt203" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left" onclick="PrimeFaces.ab({s:&quot;j_idt203&quot;,f:&quot;master_Layout_form&quot;,u:&quot;hrtaxcollection popup&quot;,onst:function(cfg){PF('masterLayoutVar').show();;},onsu:function(data,status,xhr){PF('masterLayoutVar').hide();;}});return false;" title="Click to get owner and vehicle details from Vahan 4." type="button">
+
+                                                    <span class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-s"></span><span class="ui-button-text ui-c">Get Details</span>
+
+                                                </button>
                                                 <script id="j_idt203_s" type="text/javascript">
                                                     $(function() {
                                                         PrimeFaces.cw("CommandButton", "widget_j_idt203", {
@@ -91,7 +94,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt205" class="ui-outputlabel ui-widget field-label-mandate">Chassis
                                                 No.</label>
-                                        </label><input id="j_idt207" name="j_idt207" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-disabled" disabled="disabled" aria-disabled="true" autocomplete="off" maxlength="30" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" />
+                                        </label><input id="j_idt207" name="j_idt207" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" aria-disabled="true" autocomplete="off" maxlength="30" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" />
                                         <script id="j_idt207_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_j_idt207", {
@@ -104,7 +107,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt209" class="ui-outputlabel ui-widget field-label-mandate">Owner
                                                 Name</label>
-                                        </label><input id="j_idt211" name="j_idt211" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-disabled" disabled="disabled" aria-disabled="true" autocomplete="off" maxlength="50" onkeypress="return AlphaWithSpaceOnly(event, '. ');" onkeyup="makeCaps(this);" />
+                                        </label><input id="j_idt211" name="j_idt211" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " aria-disabled="true" autocomplete="off" maxlength="50" onkeypress="return AlphaWithSpaceOnly(event, '. ');" onkeyup="makeCaps(this);" />
                                         <script id="j_idt211_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_j_idt211", {
