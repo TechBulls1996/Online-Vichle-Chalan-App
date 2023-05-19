@@ -96,6 +96,18 @@ print_r($_POST);
         </div>
         <div class="ui-grid-row">
         <div class="ui-grid-col-6">
+                <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
+                </label><div id="j_idt224" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false" aria-owns="j_idt224_items" style="min-width: 338px;"><div class="ui-helper-hidden-accessible"><input id="j_idt224_focus" name="j_idt224_focus" type="text" autocomplete="off" aria-expanded="false" aria-autocomplete="list" aria-activedescendant="j_idt224_0" aria-describedby="j_idt224_0" aria-disabled="false"></div><div class="ui-helper-hidden-accessible"><select id="j_idt224_input" name="j_idt224_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt224&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});"><option value="-1" data-escape="true">---Select Vehicle Type---</option>
+                <?php
+                
+                // Access the data
+                foreach ($VEHICLE_TYPE as $key => $val) {
+                echo '<option value="'.$val.'" data-escape="true">'.$val.'</option>';
+                }
+                ?>
+                </select></div><label id="j_idt224_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">---Select Vehicle Type---</label><div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></div></div>     
+            </div>   
+        <div class="ui-grid-col-6">
             <label class="field-label resp-label-section">
                 <label id="j_idt634" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
                 </label> 
