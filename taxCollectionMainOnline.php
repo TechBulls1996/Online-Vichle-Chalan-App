@@ -4,6 +4,10 @@ include_once('./helpers/constant.php');
 $json_states = file_get_contents('./assets/json/states.json');
 $states = json_decode($json_states, true);
 $states_reverse = array_flip($states);
+$curState = $states_reverse['ib_state_input'];
+
+$json_districts = file_get_contents('./assets/json/districts.json');
+$districts = json_decode($json_districts);
 print_r($_POST);
 ?>
 
@@ -44,7 +48,7 @@ print_r($_POST);
             <div class="ui-grid ui-grid-responsive">
                 <div class="ui-grid-row top-space center-position contents-Space">
                     <h1 class="header-main"><label id="j_idt41" class="ui-outputlabel ui-widget header-main" style="color: #154281!important;font-weight: bold!important;">BORDER TAX PAYMENT FOR
-                            ENTRY INTO</label><span class="red"> <?= $states_reverse['ib_state_input'] ?></span></h1>
+                            ENTRY INTO</label><span class="red"> <?= $curState ?></span></h1>
                 </div>
                 <div class="ui-grid-row">
                     <div class="ui-grid-col-12 center-position contents-Space">
@@ -440,28 +444,13 @@ print_r($_POST);
                                             <div class="ui-helper-hidden-accessible"><select id="j_idt250_input" name="j_idt250_input" tabindex="-1" aria-hidden="true">
                                                     <option value="-1" data-escape="true">---Select
                                                         District/Barrier---</option>
-                                                    <option value="37" data-escape="true">AMBALA</option>
-                                                    <option value="61" data-escape="true">BHIWANI</option>
-                                                    <option value="84" data-escape="true">CHARKHI DADRI</option>
-                                                    <option value="38" data-escape="true">FARIDABAD</option>
-                                                    <option value="62" data-escape="true">FATEHABAD</option>
-                                                    <option value="55" data-escape="true">GURUGRAM</option>
-                                                    <option value="39" data-escape="true">HISAR</option>
-                                                    <option value="63" data-escape="true">JHAJJAR</option>
-                                                    <option value="56" data-escape="true">JIND</option>
-                                                    <option value="64" data-escape="true">KAITHAL</option>
-                                                    <option value="45" data-escape="true">KARNAL</option>
-                                                    <option value="65" data-escape="true">KURUKSHETRA</option>
-                                                    <option value="66" data-escape="true">MAHENDRAGARH</option>
-                                                    <option value="74" data-escape="true">NUH</option>
-                                                    <option value="73" data-escape="true">PALWAL</option>
-                                                    <option value="68" data-escape="true">PANCHKULA</option>
-                                                    <option value="67" data-escape="true">PANIPAT</option>
-                                                    <option value="47" data-escape="true">REWARI</option>
-                                                    <option value="46" data-escape="true">ROHTAK</option>
-                                                    <option value="57" data-escape="true">SIRSA</option>
-                                                    <option value="69" data-escape="true">SONIPAT</option>
-                                                    <option value="58" data-escape="true">YAMUNA NAGAR</option>
+                                                    <?php
+                                                    // Access the data
+                                                    foreach ($districts[$curState] as $ind => $val) {
+                                                        echo '<option value="' . $val . '" data-escape="true">' . $val . '</option>';
+                                                    }
+                                                    ?>
+
                                                 </select></div><label id="j_idt250_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
@@ -470,48 +459,14 @@ print_r($_POST);
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="j_idt250_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                                         <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select District/Barrier---" tabindex="-1" role="option">---Select District/Barrier---</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="AMBALA" tabindex="-1" role="option">AMBALA
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="BHIWANI" tabindex="-1" role="option">BHIWANI
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CHARKHI DADRI" tabindex="-1" role="option">
-                                                            CHARKHI DADRI</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="FARIDABAD" tabindex="-1" role="option">
-                                                            FARIDABAD</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="FATEHABAD" tabindex="-1" role="option">
-                                                            FATEHABAD</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GURUGRAM" tabindex="-1" role="option">
-                                                            GURUGRAM</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="HISAR" tabindex="-1" role="option">HISAR
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="JHAJJAR" tabindex="-1" role="option">JHAJJAR
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="JIND" tabindex="-1" role="option">JIND</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KAITHAL" tabindex="-1" role="option">KAITHAL
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KARNAL" tabindex="-1" role="option">KARNAL
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KURUKSHETRA" tabindex="-1" role="option">
-                                                            KURUKSHETRA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MAHENDRAGARH" tabindex="-1" role="option">
-                                                            MAHENDRAGARH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="NUH" tabindex="-1" role="option">NUH</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PALWAL" tabindex="-1" role="option">PALWAL
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PANCHKULA" tabindex="-1" role="option">
-                                                            PANCHKULA</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PANIPAT" tabindex="-1" role="option">PANIPAT
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="REWARI" tabindex="-1" role="option">REWARI
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="ROHTAK" tabindex="-1" role="option">ROHTAK
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="SIRSA" tabindex="-1" role="option">SIRSA
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="SONIPAT" tabindex="-1" role="option">SONIPAT
-                                                        </li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="YAMUNA NAGAR" tabindex="-1" role="option">
-                                                            YAMUNA NAGAR</li>
+
+                                                        <?php
+                                                        // Access the data
+                                                        foreach ($districts[$curState] as $ind => $val) {
+                                                            echo ' <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="' . $val . '" tabindex="-1" role="option">' . $val . '</li>';
+                                                        }
+                                                        ?>
+
                                                     </ul>
                                                 </div>
                                             </div>
