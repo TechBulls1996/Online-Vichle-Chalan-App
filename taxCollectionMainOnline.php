@@ -44,7 +44,7 @@ print_r($_POST);
             <div class="ui-grid ui-grid-responsive">
                 <div class="ui-grid-row top-space center-position contents-Space">
                     <h1 class="header-main"><label id="j_idt41" class="ui-outputlabel ui-widget header-main" style="color: #154281!important;font-weight: bold!important;">BORDER TAX PAYMENT FOR
-                            ENTRY INTO</label><span class="red"> HARYANA</span></h1>
+                            ENTRY INTO</label><span class="red"> <?= $states_reverse['ib_state_input'] ?></span></h1>
                 </div>
                 <div class="ui-grid-row">
                     <div class="ui-grid-col-12 center-position contents-Space">
@@ -182,23 +182,24 @@ print_r($_POST);
                                 </div>
                                 <div class="ui-grid-row">
                                     <div class="ui-grid-col-6">
-                                        <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit
-                                                Type</label>
+                                        <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
                                         </label>
                                         <div id="j_idt224" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
                                             <div class="ui-helper-hidden-accessible"><input id="j_idt224_focus" name="j_idt224_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="j_idt224_input" name="j_idt224_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt224&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
+                                            <div class="ui-helper-hidden-accessible">
+
+                                                <select id="j_idt224_input" name="j_idt224_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt224&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Vehicle Type---
                                                     </option>
-                                                    <option value="1" data-escape="true">CONTRACT CARRIAGE/PASSENGER
-                                                        VEHICLES</option>
-                                                    <option value="2" data-escape="true">PRIVATE SERVICE VEHICLE
-                                                    </option>
-                                                    <option value="3" data-escape="true">GOODS VEHICLE</option>
-                                                    <option value="4" data-escape="true">STAGE CARRIAGE</option>
-                                                    <option value="9" data-escape="true">CONSTRUCTION EQUIPMENT
-                                                        VEHICLE</option>
-                                                </select></div><label id="j_idt224_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                                                    <?php
+                                                    // Access the data
+                                                    foreach ($VEHICLE_TYPE as $ind => $val) {
+                                                        echo '<option value="' . $ind . '" data-escape="true">' . $val . '</option>';
+                                                    }
+                                                    ?>
+
+                                                </select>
+                                            </div><label id="j_idt224_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
                                             </div>
@@ -206,15 +207,14 @@ print_r($_POST);
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="j_idt224_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                                         <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select Vehicle Type---" tabindex="-1" role="option">---Select Vehicle Type---</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CONTRACT CARRIAGE/PASSENGER VEHICLES" tabindex="-1" role="option">CONTRACT CARRIAGE/PASSENGER
-                                                            VEHICLES</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PRIVATE SERVICE VEHICLE" tabindex="-1" role="option">PRIVATE SERVICE VEHICLE</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GOODS VEHICLE" tabindex="-1" role="option">
-                                                            GOODS VEHICLE</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="STAGE CARRIAGE" tabindex="-1" role="option">
-                                                            STAGE CARRIAGE</li>
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CONSTRUCTION EQUIPMENT VEHICLE" tabindex="-1" role="option">CONSTRUCTION EQUIPMENT
-                                                            VEHICLE</li>
+                                                        <?php
+                                                        // Access the data
+                                                        foreach ($VEHICLE_TYPE as $ind => $val) {
+
+                                                            echo ' <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="' . $val . '" tabindex="-1" role="option">' . $val . '</li>';
+                                                        }
+                                                        ?>
+
                                                     </ul>
                                                 </div>
                                             </div>
@@ -248,6 +248,13 @@ print_r($_POST);
                                             <div class="ui-helper-hidden-accessible"><select id="j_idt230_input" name="j_idt230_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt230&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Vehicle Class---
                                                     </option>
+                                                    <?php
+                                                    // Access the data
+                                                    foreach ($VEHICLE_CLASS as $ind => $val) {
+                                                        echo '<option value="' . $ind . '" data-escape="true">' . $val . '</option>';
+                                                    }
+                                                    ?>
+
                                                 </select></div><label id="j_idt230_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
@@ -256,6 +263,12 @@ print_r($_POST);
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="j_idt230_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                                         <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select Vehicle Class---" tabindex="-1" role="option">---Select Vehicle Class---</li>
+                                                        <?php
+                                                        // Access the data
+                                                        foreach ($VEHICLE_CLASS as $ind => $val) {
+                                                            echo ' <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="' . $val . '" tabindex="-1" role="option">' . $val . '</li>';
+                                                        }
+                                                        ?>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -304,6 +317,12 @@ print_r($_POST);
                                             <div class="ui-helper-hidden-accessible"><select id="cmb_service_type_input" name="cmb_service_type_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_service_type&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Service Type---
                                                     </option>
+                                                    <?php
+                                                    // Access the data
+                                                    foreach ($VEHICLE_SERVICE as $ind => $val) {
+                                                        echo '<option value="' . $ind . '" data-escape="true">' . $val . '</option>';
+                                                    }
+                                                    ?>
                                                 </select></div><label id="cmb_service_type_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
@@ -312,6 +331,12 @@ print_r($_POST);
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="cmb_service_type_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                                         <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select Service Type---" tabindex="-1" role="option">---Select Service Type---</li>
+                                                        <?php
+                                                        // Access the data
+                                                        foreach ($VEHICLE_SERVICE as $ind => $val) {
+                                                            echo ' <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="' . $val . '" tabindex="-1" role="option">' . $val . '</li>';
+                                                        }
+                                                        ?>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -360,6 +385,12 @@ print_r($_POST);
                                             <div class="ui-helper-hidden-accessible"><select id="cmb_payment_mode_input" name="cmb_payment_mode_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_payment_mode&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Payment Mode---
                                                     </option>
+                                                    <?php
+                                                    // Access the data
+                                                    foreach ($PAYMENT_MODE as $ind => $val) {
+                                                        echo '<option value="' . $ind . '" data-escape="true">' . $val . '</option>';
+                                                    }
+                                                    ?>
                                                 </select></div><label id="cmb_payment_mode_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
@@ -368,6 +399,12 @@ print_r($_POST);
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="cmb_payment_mode_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
                                                         <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select Payment Mode---" tabindex="-1" role="option">---Select Payment Mode---</li>
+                                                        <?php
+                                                        // Access the data
+                                                        foreach ($PAYMENT_MODE as $ind => $val) {
+                                                            echo ' <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="' . $val . '" tabindex="-1" role="option">' . $val . '</li>';
+                                                        }
+                                                        ?>
                                                     </ul>
                                                 </div>
                                             </div>
