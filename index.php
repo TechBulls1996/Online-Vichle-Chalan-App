@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Atlas</title>
     <meta name="description" content="Free bootstrap template Atlas">
-    <!-- <link rel="icon" href="img/favicon.png" sizes="32x32" type="image/png"> -->
     <!-- custom.css -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <!-- bootstrap.min.css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
     <!-- AOS -->
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
 </head>
 
 <body>
@@ -25,46 +24,40 @@
             <header>
                 <div class="row justify-content-between">
                     <div class="col-2">
-                        <img src="img/logo.png" alt="logo">
+                        <img src="assets/img/logo.png" alt="logo">
                     </div>
                     <div class="col-6 align-self-center text-right">
                         <a href="#" class="text-white lead">Get Early Access</a>
                     </div>
                 </div>
             </header>
-            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                class="display-3 text-white font-weight-bold my-5">
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
                 A New Way<br>
                 To Start Business
             </h1>
-            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                class="lead text-white my-4">
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
                 Lorem ipsum dolor sit amet, id nec enim autem oblique, ei dico mentitum duo.
                 <br> Illum iusto laoreet his te. Lorem partiendo mel ex. Ad vitae admodum voluptatum per.
             </p>
-            <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true"
-                class="btn my-4 font-weight-bold atlas-cta cta-green">Get Started</a>
+            <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Started</a>
         </div>
     </div>
     <!-- three-blcok -->
     <div class="container my-5 py-2">
         <h2 class="text-center font-weight-bold my-5">Smartest protection for your site</h2>
         <div class="row">
-            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true"
-                class="col-md-4 text-center">
-                <img src="img/smart-protect-1.jpg" alt="Anti-spam" class="mx-auto">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="assets/img/smart-protect-1.jpg" alt="Anti-spam" class="mx-auto">
                 <h4>Anti-spam</h4>
                 <p>Lorem ipsum dolor sit amet porro his no his deleniti</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-                class="col-md-4 text-center">
-                <img src="img/smart-protect-2.jpg" alt="Phishing Detect" class="mx-auto">
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="assets/img/smart-protect-2.jpg" alt="Phishing Detect" class="mx-auto">
                 <h4>Phishing Detect</h4>
                 <p>Ne error antiopam usu. Sed vocen concludaturque ea</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true"
-                class="col-md-4 text-center">
-                <img src="img/smart-protect-3.jpg" alt="Smart Scan" class="mx-auto">
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="assets/img/smart-protect-3.jpg" alt="Smart Scan" class="mx-auto">
                 <h4>Smart Scan</h4>
                 <p>Et usu ocurreret elaboraret doctus prodesse assueverit.</p>
             </div>
@@ -81,9 +74,8 @@
                     </p>
                     <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true"
-                    class="col-md-6 align-self-center">
-                    <img src="img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="assets/img/feature-1.png" alt="Take a look inside" class="mx-auto d-block">
                 </div>
             </div>
         </div>
@@ -100,9 +92,8 @@
                     </p>
                     <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
                 </div>
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true"
-                    class="col-md-6 align-self-center flex-md-first">
-                    <img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                    <img src="assets/img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
                 </div>
             </div>
         </div>
@@ -112,8 +103,7 @@
     <div class="container my-5 py-2" id="price-table">
         <h2 class="text-center font-weight-bold d-block mb-3">Check our pricing</h2>
         <div class="row">
-            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-                class="col-md-4 text-center py-4 mt-5">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
                 <h4 class="my-4">STARTUP</h4>
                 <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
                 <ul class="list-unstyled">
@@ -124,8 +114,7 @@
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"
-                class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
                 <h4 class="my-4">PREMIUM</h4>
                 <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
                 <ul class="list-unstyled">
@@ -136,8 +125,7 @@
                 </ul>
                 <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Free</a>
             </div>
-            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true"
-                class="col-md-4 text-center py-4 mt-5">
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
                 <h4 class="my-4">PROFESSIONAL</h4>
                 <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">30</span> / MO.</p>
                 <ul class="list-unstyled">
@@ -155,22 +143,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-1.png" class="mx-auto d-block">
+                    <img src="assets/img/client-1.png" class="mx-auto d-block">
                 </div>
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-2.png" class="mx-auto d-block">
+                    <img src="assets/img/client-2.png" class="mx-auto d-block">
                 </div>
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-3.png" class="mx-auto d-block">
+                    <img src="assets/img/client-3.png" class="mx-auto d-block">
                 </div>
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-4.png" class="mx-auto d-block">
+                    <img src="assets/img/client-4.png" class="mx-auto d-block">
                 </div>
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-5.png" class="mx-auto d-block">
+                    <img src="assets/img/client-5.png" class="mx-auto d-block">
                 </div>
                 <div class="col-sm-4 col-md-2 py-2 align-self-center">
-                    <img src="img/client-6.png" class="mx-auto d-block">
+                    <img src="assets/img/client-6.png" class="mx-auto d-block">
                 </div>
             </div>
         </div>
@@ -207,8 +195,7 @@
                             <label for="message">Message</label>
                             <textarea class="form-control" id="message" rows="3"></textarea>
                         </div>
-                        <button type="submit"
-                            class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Submit</button>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Submit</button>
                     </form>
                 </div>
             </div>
@@ -243,7 +230,7 @@
     <!-- AOS -->
     <script src="js/aos.js"></script>
     <script>
-    AOS.init({});
+        AOS.init({});
     </script>
 </body>
 
