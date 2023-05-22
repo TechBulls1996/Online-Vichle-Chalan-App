@@ -2,8 +2,8 @@
 include_once('../includes/connection.php');
 
 if (isset($_POST['login'])) {
-    $username = $_POST['name'];
-    $email = $_POST['email'];
+    $username = mysqli_real_escape_string($conn, $_POST['name']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
 
     $sql = "SELECT * FROM `users` WHERE username = '$username' and email = '$email' and `type` = 'admin'";
     $res = mysqli_query($conn, $sql);
@@ -13,7 +13,7 @@ if (isset($_POST['login'])) {
         $id = $row['id'];
         $_SESSION["ID"] = $id;
         $_SESSION["USERNAME"] = $row['username'];
-        //  header('location:admin.php');
+        // header('location:admin.php');
         $sucMsg = array('status' => 200);
         echo json_encode($sucMsg);
     } else {

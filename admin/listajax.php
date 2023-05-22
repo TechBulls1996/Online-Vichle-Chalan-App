@@ -16,5 +16,3 @@ $dataset = array(
 );
 
 echo json_encode($dataset);
-// echo "<pre>";
-// print_r($row);
