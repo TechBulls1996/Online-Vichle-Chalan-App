@@ -19,7 +19,7 @@
 
 <body>
     <!-- banner -->
-    <div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url(img/banner-bk.jpg);">
+    <div class="jumbotron jumbotron-fluid" id="banner" style="background-image: url(assets/img/banner-bk.jpg);">
         <div class="container text-center text-md-left">
             <header>
                 <div class="row justify-content-between">
@@ -164,7 +164,7 @@
         </div>
     </div>
     <!-- contact -->
-    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(img/contact-bk.jpg);">
+    <div class="jumbotron jumbotron-fluid" id="contact" style="background-image: url(assets/img/contact-bk.jpg);">
         <div class="container my-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 text-white">
