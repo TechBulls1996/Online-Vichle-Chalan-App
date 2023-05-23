@@ -320,7 +320,7 @@ document.getElementById('master_Layout_form').addEventListener('submit', functio
     event.preventDefault(); // Prevent the form from submitting normally
 
     // Change the form's action
-    this.action = '<?php echo $URL; ?>taxCollectionMainOnline.php';
+    this.action = '<?php echo $URL; ?>/taxCollectionMainOnline.php';
     // Submit the form
     this.submit();
 });
