@@ -5,8 +5,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//read .env file
-$env = parse_ini_file('.env');
+if (!$env) {
+    //read .env file
+    $env = parse_ini_file('.env');
+}
 
 $servername = $env["HOST"];
 $username = $env["DBUSERNAME"];
