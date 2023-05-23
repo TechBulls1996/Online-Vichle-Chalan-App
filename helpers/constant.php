@@ -1,6 +1,5 @@
 <?php
-
-if (!$env) {
+if (!isset($env)) {
     //read .env file
     $env = parse_ini_file('.env');
 }
