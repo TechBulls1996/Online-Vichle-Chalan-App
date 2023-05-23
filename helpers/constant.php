@@ -1,6 +1,10 @@
 <?php
 
-$URL = "http://localhost/rajat-main/";
+if (!$env) {
+    //read .env file
+    $env = parse_ini_file('.env');
+}
+$URL = $env["URL"];
 
 $VEHICLE_TYPE = [
     "CONTRACT CARRIAGE/PASSENGER VEHICLES",
