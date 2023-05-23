@@ -228,7 +228,7 @@
     </div>
 
     <!-- AOS -->
-    <script src="js/aos.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script>
         AOS.init({});
     </script>
