@@ -21,7 +21,7 @@ if ($_REQUEST['page'] == 'users') {
 
 
 if ($_REQUEST['page'] == 'formdata') {
-    $sql = "SELECT * status FROM `formData` ";
+    $sql = "SELECT *  FROM `formData` ";
     $res = mysqli_query($conn, $sql);
     $array = [];
     while ($row = mysqli_fetch_assoc($res)) {

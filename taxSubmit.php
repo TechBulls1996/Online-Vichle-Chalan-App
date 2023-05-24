@@ -38,7 +38,9 @@ if (mysqli_num_rows($result) == 0) {
         infra_cess INT,
         permit_fee INT,
         permit_variation INT,
-        total_tax INT
+        total_tax INT,
+        uid INT DEFAULT NULL,
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
 
     // Execute the create query
