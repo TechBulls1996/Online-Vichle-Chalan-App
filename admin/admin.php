@@ -40,9 +40,9 @@ include_once('includes/header.php');
     //var i = 1;
     var table = $('#ajax-datatable').dataTable({
         "processing": true,
-        "ajax": "listajax.php",
+        "ajax": "listajax.php?page=users",
         "columns": [{
-                //data: 'id'
+
                 data: 'SrNo',
                 render: function(data, type, row, meta) {
                     return meta.row + 1;
@@ -51,34 +51,20 @@ include_once('includes/header.php');
             {
                 data: 'username'
             },
-
             {
                 render: (data, type, row) => {
                     if (row.status == 'active') {
-                        return `<div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="viewStatus" value='${row.id}' style='height:20px; width:3em;' checked>
-  
-</div>`;
+                        return `<div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="viewStatus" value='${row.id}' style='height:20px; width:3em;' checked></div>`;
                     } else {
-                        return `<div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="viewStatus" value='${row.id}' style='height:20px; width:3em;'>
-  
-</div>`;
+                        return `<div class="form-check form-switch"> <input class="form-check-input" type="checkbox" id="viewStatus" value='${row.id}' style='height:20px; width:3em;'></div>`;
                     }
-
-
                 }
             },
-
-
             {
                 render: (data, type, row) => {
                     return `<a href='formData.php?id=${row.id}' class='btn-sm btn btn-info'>View</a>  <button class='btn-sm btn btn-danger ms-2' id="delValue" value='${row.id}'>Delete</button>`;
-
                 }
-
             },
-
         ]
     });
 
