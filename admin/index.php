@@ -1,4 +1,6 @@
-<?php $MAINURL = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>
+<?php
+$MAINURL = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,8 +24,7 @@
             text-align: center;
         }
 
-        .container input[type="text"],
-        .container input[type="email"] {
+        .container input {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -62,8 +63,8 @@
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
 
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" required>
+            <label for="email">Password</label>
+            <input type="password" id="password" name="password" required>
 
             <button type="submit">Login</button>
         </form>
@@ -76,13 +77,13 @@
         e.preventDefault();
 
         let name = $("#username").val();
-        let email = $("#email").val();
+        let pass = $("#password").val();
         $.ajax({
             url: 'adminAjax.php',
             method: 'post',
             data: {
-                name: name,
-                email: email,
+                name,
+                pass,
                 login: 'login'
             },
             success: function(result) {
@@ -97,7 +98,7 @@
                     $("#lofrm")[0].reset();
                     setTimeout(() => {
                         $("#errMsg").html("");
-                    }, 4000);
+                    }, 10000);
                 }
 
 

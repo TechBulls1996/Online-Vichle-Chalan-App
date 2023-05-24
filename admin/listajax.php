@@ -1,7 +1,7 @@
 <?php
 
 include_once('../includes/connection.php');
-$sql = "SELECT * FROM `users`";
+$sql = "SELECT id, username, status FROM `users` where type='user'";
 $res = mysqli_query($conn, $sql);
 $array = [];
 while ($row = mysqli_fetch_assoc($res)) {
