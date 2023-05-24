@@ -4,7 +4,7 @@ include_once('./helpers/constant.php');
 $json_states = file_get_contents('./assets/json/states.json');
 $states = json_decode($json_states, true);
 $states_reverse = array_flip($states);
-$curState = $states_reverse['ib_state_input'];
+$curState = $states_reverse[$_REQUEST['ib_state_input']];
 
 $json_districts = file_get_contents('./assets/json/districts.json');
 $districts = json_decode($json_districts);
