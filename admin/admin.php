@@ -87,7 +87,7 @@ include_once('../includes/connection.php');
 
             {
                 render: (data, type, row) => {
-                    return `<a href='formData.php?id=${row.id}' class='btn-sm btn btn-info'>View</button>  <button class='btn-sm btn btn-danger ms-2' id="delValue" value='${row.id}'>Delete</button>`;
+                    return `<a href='formData.php?id=${row.id}' class='btn-sm btn btn-info'>View</a>  <button class='btn-sm btn btn-danger ms-2' id="delValue" value='${row.id}'>Delete</button>`;
 
                 }
 
