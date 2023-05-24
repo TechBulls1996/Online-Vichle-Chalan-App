@@ -2,9 +2,6 @@
 include_once('./includes/header.php');
 include_once('./includes/connection.php');
 
-$email = $_POST['txtLogin'];
-$password = $_POST['CaptchaID'];
-
 // Check if the table exists
 $tableName = 'users';
 
@@ -35,7 +32,9 @@ if (mysqli_num_rows($result) == 0) {
     }
 }
 
-if (isset($email) && isset($password)) {
+if (isset($_POST)) {
+    $email = $_POST['txtLogin'];
+    $password = $_POST['CaptchaID'];
     $query = "SELECT * FROM $tableName WHERE username = '$email' AND type='user'";
     $result = mysqli_query($conn, $query);
 
