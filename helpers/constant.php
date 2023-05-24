@@ -43,3 +43,7 @@ $WEIGHT = [
     "Laden Weight",
     "Seating Capacity"
 ];
+
+$PERMIT_TYPE = [
+    "NOT APPLICABLE", "TOURIST PERMIT", "SPECIAL PERMIT", "TEMPRORARY PERMIT", "NATIONAL PERMIT"
+];
