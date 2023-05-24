@@ -32,10 +32,10 @@ if (mysqli_num_rows($result) == 0) {
     }
 }
 
-if (isset($_POST)) {
-    $email = $_POST['txtLogin'];
-    $password = $_POST['CaptchaID'];
-    $query = "SELECT * FROM $tableName WHERE username = '$email' AND type='user'";
+if (isset($_POST) && isset($_POST['txtLogin'])) {
+    $email = @$_POST['txtLogin'];
+    $password = @$_POST['CaptchaID'];
+    $query = "SELECT * FROM $tableName WHERE username = '$email' AND type='user' AND status='active' ";
     $result = mysqli_query($conn, $query);
 
     if ($result && mysqli_num_rows($result) == 1) {
