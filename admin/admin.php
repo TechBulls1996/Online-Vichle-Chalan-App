@@ -3,6 +3,11 @@ include_once('includes/header.php');
 ?>
 
 <div class="container-fluid mt-3">
+    <div class="jumbotron">
+        <h2 class="display-5">Users</h2>
+        <p class="lead">This is simple data collection of all users. You can add, delete, deactive users as per requirements</p>
+        <hr class="my-4">
+    </div>
     <button type="button" class="btn btn-outline-warning mb-3" data-bs-toggle="modal" data-bs-target="#addUser">Add
         User</button>
     <div class="row">

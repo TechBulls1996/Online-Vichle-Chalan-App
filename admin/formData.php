@@ -9,6 +9,7 @@ include_once('includes/header.php');
                 <p class="lead">This is simple data collection of all users, where you can see how much tax collected.</p>
                 <hr class="my-4">
             </div>
+
             <h4 class="text-danger ms-5" id="delMsg"></h4>
             <h4 class="text-success ms-5" id="staMsg"></h4>
 
