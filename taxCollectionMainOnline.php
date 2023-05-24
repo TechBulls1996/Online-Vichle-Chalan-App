@@ -43,7 +43,7 @@ print_r($_POST);
     }, 50);
 </script>
 <form id="master_Layout_form" name="master_Layout_form" method="post" action="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollectionMainOnline.xhtml" enctype="application/x-www-form-urlencoded">
-    <input type="hidden" name="master_Layout_form" value="master_Layout_form" />
+    <input type="hidden" name="selected_state" value="<?= $curState ?>" />
     <div>
         <div class="container-fluid">
             <div class="ui-grid ui-grid-responsive">
@@ -66,7 +66,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt199" class="ui-outputlabel ui-widget field-label-mandate">Vehicle
                                                 No.</label>
-                                        </label><input id="j_idt201" name="j_idt201" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" onkeypress="return AlphaOnly(event, 'abcdefghijklmnopqrstuvwxyz0123456789');" onkeyup="makeCaps(this);" />
+                                        </label><input id="j_idt201" name="vehicle_no" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" onkeypress="return AlphaOnly(event, 'abcdefghijklmnopqrstuvwxyz0123456789');" onkeyup="makeCaps(this);" />
                                         <script id="j_idt201_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_j_idt201", {
@@ -99,7 +99,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt205" class="ui-outputlabel ui-widget field-label-mandate">Chassis
                                                 No.</label>
-                                        </label><input id="j_idt207" name="j_idt207" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" aria-disabled="true" autocomplete="off" maxlength="30" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" />
+                                        </label><input required id="j_idt207" name="chassis_no" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" aria-disabled="true" autocomplete="off" maxlength="30" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" />
                                         <script id="j_idt207_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_j_idt207", {
@@ -112,7 +112,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt209" class="ui-outputlabel ui-widget field-label-mandate">Owner
                                                 Name</label>
-                                        </label><input id="j_idt211" name="j_idt211" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " aria-disabled="true" autocomplete="off" maxlength="50" onkeypress="return AlphaWithSpaceOnly(event, '. ');" onkeyup="makeCaps(this);" />
+                                        </label><input required id="j_idt211" name="owner_name" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all " aria-disabled="true" autocomplete="off" maxlength="50" onkeypress="return AlphaWithSpaceOnly(event, '. ');" onkeyup="makeCaps(this);" />
                                         <script id="j_idt211_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_j_idt211", {
@@ -127,7 +127,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt213" class="ui-outputlabel ui-widget field-label-mandate">Mobile
                                                 No.</label>
-                                        </label><input id="mobileno" name="mobileno" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" placeholder="SMS about payment will be sent to this number." title="SMS about payment will be sent to this number." onkeypress="return NumericOnly(event, '');" />
+                                        </label><input required id="mobileno" name="mobileno" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" placeholder="SMS about payment will be sent to this number." title="SMS about payment will be sent to this number." onkeypress="return NumericOnly(event, '');" />
                                         <script id="mobileno_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_mobileno", {
@@ -142,8 +142,9 @@ print_r($_POST);
                                                 State</label>
                                         </label>
                                         <div id="j_idt218" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="j_idt218_focus" name="j_idt218_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="j_idt218_input" name="j_idt218_input" tabindex="-1" aria-hidden="true">
+                                            <div class="ui-helper-hidden-accessible"><input required id="j_idt218_focus" name="j_idt218_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
+                                            <div class="ui-helper-hidden-accessible">
+                                                <select required id="j_idt218_input" name="from_state" tabindex="-1" aria-hidden="true">
                                                     <option value="-1" data-escape="true">---Select State---
                                                     </option>
 
@@ -154,7 +155,8 @@ print_r($_POST);
                                                     }
                                                     ?>
 
-                                                </select></div><label id="j_idt218_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                                                </select>
+                                            </div><label id="j_idt218_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
                                             </div>
@@ -190,10 +192,10 @@ print_r($_POST);
                                         <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
                                         </label>
                                         <div id="j_idt224" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="j_idt224_focus" name="j_idt224_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
+                                            <div class="ui-helper-hidden-accessible"><input required id="j_idt224_focus" name="j_idt224_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
                                             <div class="ui-helper-hidden-accessible">
 
-                                                <select id="j_idt224_input" name="j_idt224_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt224&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
+                                                <select required id="j_idt224_input" name="vehicle_type" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt224&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Vehicle Type---
                                                     </option>
                                                     <?php
@@ -249,8 +251,9 @@ print_r($_POST);
                                                 Class</label>
                                         </label>
                                         <div id="j_idt230" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="j_idt230_focus" name="j_idt230_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="j_idt230_input" name="j_idt230_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt230&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
+                                            <div class="ui-helper-hidden-accessible"></div>
+                                            <div class="ui-helper-hidden-accessible">
+                                                <select required id="j_idt230_input" name="vehicle_class" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;j_idt230&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Vehicle Class---
                                                     </option>
                                                     <?php
@@ -260,7 +263,8 @@ print_r($_POST);
                                                     }
                                                     ?>
 
-                                                </select></div><label id="j_idt230_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                                                </select>
+                                            </div><label id="j_idt230_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
                                             <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
                                                 <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
                                             </div>
@@ -303,7 +307,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="lbl_seat_cap" class="ui-outputlabel ui-widget field-label-mandate">Seating
                                                 Capacity (Excluding Driver)</label>
-                                        </label><input id="txt_seat_cap" name="txt_seat_cap" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="2" onkeypress="return NumericOnly(event, '');" />
+                                        </label><input required id="txt_seat_cap" name="seating_cap" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="2" onkeypress="return NumericOnly(event, '');" />
                                         <script id="txt_seat_cap_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_txt_seat_cap", {
@@ -318,8 +322,7 @@ print_r($_POST);
                                                 Type</label>
                                         </label>
                                         <div id="cmb_service_type" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="cmb_service_type_focus" name="cmb_service_type_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="cmb_service_type_input" name="cmb_service_type_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_service_type&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
+                                            <div class="ui-helper-hidden-accessible"><select required id="cmb_service_type_input" name="service_type" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_service_type&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Service Type---
                                                     </option>
                                                     <?php
@@ -371,7 +374,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="lbl_distance" class="ui-outputlabel ui-widget">Distance(In KM)<font color=#FF0000>
                                                     *</font></label>
-                                        </label><input id="txt_distance" name="txt_distance" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" onkeypress="return NumericOnly(event, '');" />
+                                        </label><input required id="txt_distance" name="distance" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" maxlength="10" onkeypress="return NumericOnly(event, '');" />
                                         <script id="txt_distance_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_txt_distance", {
@@ -386,8 +389,8 @@ print_r($_POST);
                                                 Mode</label>
                                         </label>
                                         <div id="cmb_payment_mode" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="cmb_payment_mode_focus" name="cmb_payment_mode_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="cmb_payment_mode_input" name="cmb_payment_mode_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_payment_mode&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
+
+                                            <div class="ui-helper-hidden-accessible"><select required id="cmb_payment_mode_input" name="tax_mode" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_payment_mode&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Payment Mode---
                                                     </option>
                                                     <?php
@@ -441,8 +444,8 @@ print_r($_POST);
                                                 District through Entering</label>
                                         </label>
                                         <div id="j_idt250" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="j_idt250_focus" name="j_idt250_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="j_idt250_input" name="j_idt250_input" tabindex="-1" aria-hidden="true">
+
+                                            <div class="ui-helper-hidden-accessible"><select required id="j_idt250_input" name="barrier_district" tabindex="-1" aria-hidden="true">
                                                     <option value="-1" data-escape="true">---Select
                                                         District/Barrier---</option>
                                                     <?php
@@ -484,7 +487,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-3">
                                         <label class="field-label resp-label-section"><label id="j_idt254" class="ui-outputlabel ui-widget field-label-mandate">Tax From
                                                 Date</label>
-                                        </label><span id="cal_tax_from" class="ui-calendar"><input id="cal_tax_from_input" name="cal_tax_from_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" autocomplete="off" placeholder="DD-MM-YYYY HH:mm" /></span>
+                                        </label><span id="cal_tax_from" class="ui-calendar"><input required id="cal_tax_from_input" name="tax_from" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" autocomplete="off" placeholder="DD-MM-YYYY HH:mm" /></span>
                                         <script id="cal_tax_from_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("Calendar", "widget_cal_tax_from", {
@@ -528,7 +531,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-3">
                                         <label class="field-label resp-label-section"><label id="j_idt257" class="ui-outputlabel ui-widget field-label-mandate">Tax Upto
                                                 Date</label>
-                                        </label><span id="cal_tax_to" class="ui-calendar"><input id="cal_tax_to_input" name="cal_tax_to_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" autocomplete="off" placeholder="DD-MM-YYYY HH:mm" /></span>
+                                        </label><span id="cal_tax_to" class="ui-calendar"><input required id="cal_tax_to_input" name="tax_upto" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" autocomplete="off" placeholder="DD-MM-YYYY HH:mm" /></span>
                                         <script id="cal_tax_to_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("Calendar", "widget_cal_tax_to", {
@@ -574,8 +577,8 @@ print_r($_POST);
                                         <label class="field-label resp-label-section"><label id="j_idt243" class="ui-outputlabel ui-widget field-label-mandate"> Permit Type</label>
                                         </label>
                                         <div id="cmb_payment_mode2" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
-                                            <div class="ui-helper-hidden-accessible"><input id="cmb_payment_mode2_focus" name="cmb_payment_mode2_focus" type="text" autocomplete="off" aria-expanded="false" /></div>
-                                            <div class="ui-helper-hidden-accessible"><select id="cmb_payment_mode2_input" name="cmb_payment_mode2_input" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_payment_mode2&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
+
+                                            <div class="ui-helper-hidden-accessible"><select required id="cmb_payment_mode2_input" name="permit" tabindex="-1" aria-hidden="true" onchange="PrimeFaces.ab({s:&quot;cmb_payment_mode2&quot;,e:&quot;change&quot;,f:&quot;master_Layout_form&quot;,p:&quot;hrtaxcollection&quot;,u:&quot;hrtaxcollection&quot;});">
                                                     <option value="-1" data-escape="true">---Select Payment Mode---
                                                     </option>
                                                     <?php
@@ -624,7 +627,7 @@ print_r($_POST);
                                     </div>
                                     <div class="ui-grid-col-3">
                                         <label class="field-label resp-label-section"><label id="j_idt254" class="ui-outputlabel ui-widget field-label-mandate">Permit Upto</label>
-                                        </label><span id="cal_tax_from2" class="ui-calendar"><input id="cal_tax_from2_input" name="cal_tax_from2_input" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" autocomplete="off" placeholder="DD-MM-YYYY" /></span>
+                                        </label><span id="cal_tax_from2" class="ui-calendar"><input required id="cal_tax_from2_input" name="permit_upto" type="text" class="ui-inputfield ui-widget ui-state-default ui-corner-all" autocomplete="off" placeholder="DD-MM-YYYY" /></span>
                                         <script id="cal_tax_from2_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("Calendar", "widget_cal_tax_from2", {
@@ -668,7 +671,7 @@ print_r($_POST);
 
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt122" class="ui-outputlabel ui-widget">Permit No.</label>
-                                        </label><input id="j_idt124" name="j_idt124" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+                                        </label><input required id="j_idt124" name="permit_no" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
                                     </div>
                                 </div><br />
                                 <div class="ui-grid-row">
@@ -696,7 +699,7 @@ print_r($_POST);
                                                             <td></td>
                                                             <td></td>
                                                             <td>
-                                                                <input id="tableInput1" name="tableInput1" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+                                                                <input required id="tableInput1" name="mv_tax" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
                                                             </td>
 
                                                         </tr>
@@ -706,7 +709,7 @@ print_r($_POST);
                                                             <td></td>
                                                             <td></td>
                                                             <td>
-                                                                <input id="tableInput2" name="tableInput2" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+                                                                <input required id="tableInput2" name="cess" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
                                                             </td>
 
                                                         </tr>
@@ -716,7 +719,7 @@ print_r($_POST);
                                                             <td></td>
                                                             <td></td>
                                                             <td>
-                                                                <input id="tableInput3" name="tableInput3" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+                                                                <input required id="tableInput3" name="infra_cess" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
                                                             </td>
 
                                                         </tr>
@@ -726,7 +729,7 @@ print_r($_POST);
                                                             <td></td>
                                                             <td></td>
                                                             <td>
-                                                                <input id="tableInput4" name="tableInput4" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+                                                                <input required id="tableInput4" name="permit_fee" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
                                                             </td>
 
                                                         </tr>
@@ -736,7 +739,7 @@ print_r($_POST);
                                                             <td></td>
                                                             <td></td>
                                                             <td>
-                                                                <input id="tableInput5" name="tableInput5" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
+                                                                <input required id="tableInput5" name="permit_variation" type="text" value="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" autocomplete="off" onkeypress="return AlphaOnly(event, '*#.0123456789');" onkeyup="makeCaps(this);" role="textbox" aria-disabled="false" aria-readonly="false">
                                                             </td>
 
                                                         </tr>
@@ -759,7 +762,7 @@ print_r($_POST);
                                     <div class="ui-grid-col-6">
                                         <label class="field-label resp-label-section"><label id="j_idt271" class="ui-outputlabel ui-widget field-label-mandate">Total
                                                 Amount</label>
-                                        </label><input id="txt_tax_amount" name="txt_tax_amount" type="text" style="font-size: 15pt;font-weight: bold;" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-disabled" disabled="disabled" aria-disabled="true" />
+                                        </label><input required id="txt_tax_amount" name="tax_amount" type="text" style="font-size: 15pt;font-weight: bold;" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-disabled" disabled="disabled" />
                                         <script id="txt_tax_amount_s" type="text/javascript">
                                             $(function() {
                                                 PrimeFaces.cw("InputText", "widget_txt_tax_amount", {
@@ -929,7 +932,6 @@ print_r($_POST);
         });
     </script>
      -->
-    <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-8478847669435243492:-1765128807672062895" autocomplete="off" />
 </form>
 
 <script id="j_idt51_s" type="text/javascript">
