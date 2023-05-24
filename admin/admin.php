@@ -1,8 +1,9 @@
 <?php
 include_once('../includes/connection.php');
-// session_start();
-// print_r($_SESSION);
-?>
+if (!isset($_SESSION['USERNAME'])) {
+    header('location:index.php');
+}; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +17,32 @@ include_once('../includes/connection.php');
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+            <h4 class="m-auto float-end me-5 text-white">Welcome <?php if (isset($_SESSION['USERNAME'])) {
+                                                                        echo $_SESSION['USERNAME'];
+                                                                    }; ?></h5>
+                <a class="btn btn-outline-warning nav-link text-white" href="logout.php">Logout</a>
+        </div>
+    </nav>
     <div class="container-fluid mt-3">
         <button type="button" class="btn btn-outline-warning mb-3" data-bs-toggle="modal" data-bs-target="#addUser">Add
             User</button>
