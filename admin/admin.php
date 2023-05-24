@@ -1,46 +1,32 @@
 <?php
-include_once('../includes/connection.php');
-// session_start();
-// print_r($_SESSION);
+include_once('includes/header.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
-    <title>Admin</title>
-</head>
+<div class="container-fluid mt-3">
+    <button type="button" class="btn btn-outline-warning mb-3" data-bs-toggle="modal" data-bs-target="#addUser">Add
+        User</button>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <h4 class="text-danger ms-5" id="delMsg"></h4>
+            <h4 class="text-success ms-5" id="staMsg"></h4>
 
-<body>
-    <div class="container-fluid mt-3">
-        <button type="button" class="btn btn-outline-warning mb-3" data-bs-toggle="modal" data-bs-target="#addUser">Add
-            User</button>
-        <div class="row">
-            <div class="col-md-12 mb-3">
-                <h4 class="text-danger ms-5" id="delMsg"></h4>
-                <h4 class="text-success ms-5" id="staMsg"></h4>
+            <table class="table table-success table-striped table-hover p-2" id="ajax-datatable">
+                <h5 class="text-danger" id="delMsg"></h5>
+                <thead>
+                    <tr>
+                        <th scope="col">Sr.no</th>
+                        <th scope="col">Username</th>
 
-                <table class="table table-success table-striped table-hover p-2" id="ajax-datatable">
-                    <h5 class="text-danger" id="delMsg"></h5>
-                    <thead>
-                        <tr>
-                            <th scope="col">Sr.no</th>
-                            <th scope="col">Username</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
 
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                    </tr>
+                </thead>
 
-                        </tr>
-                    </thead>
-
-                </table>
-            </div>
+            </table>
         </div>
     </div>
+</div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
