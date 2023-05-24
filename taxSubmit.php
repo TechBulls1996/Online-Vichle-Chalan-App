@@ -1,8 +1,55 @@
 <pre>
 <?php
 require_once("includes/connection.php");
-print_r($_REQUEST);
 
+// Check if the table exists
+$tableName = 'formData';
+
+//$query = "DROP TABLE IF EXISTS $tableName";
+//$result = mysqli_query($conn, $query);
+
+$query = "SHOW TABLES LIKE '$tableName'";
+$result = mysqli_query($conn, $query);
+
+if (mysqli_num_rows($result) == 0) {
+    // Table doesn't exist, create it
+    $createQuery = "CREATE TABLE $tableName (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        selected_state VARCHAR(255),
+        vehicle_no VARCHAR(255),
+        chassis_no VARCHAR(255),
+        owner_name VARCHAR(255),
+        mobileno VARCHAR(255),
+        from_state VARCHAR(255),
+        vehicle_type INT,
+        vehicle_class INT,
+        seating_cap INT,
+        service_type INT,
+        distance INT,
+        tax_mode INT,
+        barrier_district VARCHAR(255),
+        tax_from DATETIME,
+        tax_upto DATETIME,
+        permit INT,
+        permit_upto DATE,
+        permit_no INT,
+        mv_tax INT,
+        cess INT,
+        infra_cess INT,
+        permit_fee INT,
+        permit_variation INT,
+        total_tax INT
+    )";
+
+    // Execute the create query
+    $createResult = mysqli_query($conn, $createQuery);
+
+    if ($createResult) {
+        echo "Table created successfully.";
+    } else {
+        echo "Error creating table: " . mysqli_error($conn);
+    }
+}
 
 // Assuming you have the $post array
 $post = $_POST;
@@ -13,26 +60,23 @@ $columns = array_keys($post);
 $values = array_values($post);
 
 // Prepare the placeholders for the query
-$placeholders = array_fill(0, count($columns), '?');
-$placeholders = implode(', ', $placeholders);
+
+$placeholders = implode("','", $values);
+
+print_r($post);
 
 // Prepare the insert query
-$sql = "INSERT INTO formData (" . implode(', ', $columns) . ") VALUES (" . $placeholders . ")";
+$sql = "INSERT INTO " . $tableName . " (" . implode(', ', $columns) . ") VALUES ('" . $placeholders . "')";
+echo $sql;
+// Execute the query
+$result = mysqli_query($conn, $sql);
 
-// Prepare the statement
-$stmt = $conn->prepare($sql);
-
-// Bind values to the query
-$stmt->bind_param(str_repeat('s', count($values)), ...$values);
-
-// Execute the statement
-if ($stmt->execute()) {
+if ($result) {
     echo "Record inserted successfully.";
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error inserting record: " . mysqli_error($conn);
 }
 
-// Close the statement and connection
-$stmt->close();
-$conn->close();
+// Close the database conn
+mysqli_close($conn);
 ?>
