@@ -16,6 +16,7 @@ if (mysqli_num_rows($result) == 0) {
     $createQuery = "CREATE TABLE $tableName (
         id INT AUTO_INCREMENT PRIMARY KEY,
         username VARCHAR(255),
+        email VARCHAR(255),
         password VARCHAR(255),
         status VARCHAR(30) DEFAULT 'active'
         type VARCHAR(255) DEFAULT 'user',
@@ -120,7 +121,8 @@ mysqli_close($conn);
         <div class="news_w">
             <div data-direction="left" class="marquee-with-options">
                 <marquee scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" direction="left" behavior="alternate">
-                    <font size="4" color="#ff0f0f">Select the service name carefully in case you select wrong service and pay the fee/tax, amount will not be refunded or adjusted.</font>
+                    <font size="4" color="#ff0f0f">Select the service name carefully in case you select wrong service
+                        and pay the fee/tax, amount will not be refunded or adjusted.</font>
                 </marquee>
             </div>
         </div>
@@ -157,7 +159,8 @@ mysqli_close($conn);
         </script>
         <div id="j_idt52" class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container">
             <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="j_idt52_title" class="ui-dialog-title"></span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
-            <div class="ui-dialog-content ui-widget-content" id="j_idt52_content"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div>
+            <div class="ui-dialog-content ui-widget-content" id="j_idt52_content"><span class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span>
+            </div>
             <div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="j_idt53" name="j_idt53" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes" type="button"><span class="ui-button-icon-left ui-icon ui-c ui-icon-check"></span><span class="ui-button-text ui-c">Yes</span></button>
                 <script id="j_idt53_s" type="text/javascript">
                     $(function() {
@@ -195,7 +198,10 @@ mysqli_close($conn);
                 <div id="main">
                     <div class="ui-grid-row center-position" id="skip-main-content">
                         <div class="ui-grid-col-12"><img src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/NewImage.gif?ln=images" />
-                            <font style="color:#FF0000!important;font-size:15pt!important;">Other state Temporary Permit for all CHECKPOST of Tamil Nadu enabled.Kindly use the facility. Checkpost module was inaugurated by Hon. Transport Minister,Kerala at Walayar Checkpost today 21 Oct,2022.</font>
+                            <font style="color:#FF0000!important;font-size:15pt!important;">Other state Temporary Permit
+                                for all CHECKPOST of Tamil Nadu enabled.Kindly use the facility. Checkpost module was
+                                inaugurated by Hon. Transport Minister,Kerala at Walayar Checkpost today 21 Oct,2022.
+                            </font>
                         </div>
                     </div>
                     <div class="ui-grid-row center-position" id="skip-main-content">
@@ -216,22 +222,29 @@ mysqli_close($conn);
                             <div class="ui-grid-row">
                                 <div class="ui-grid-col-11">
                                     <div class="panel panel-primary">
-                                        <div class="panel-heading "><span class="glyphicon glyphicon-th-list"></span>Important information...</div>
+                                        <div class="panel-heading "><span class="glyphicon glyphicon-th-list"></span>Important information...
+                                        </div>
                                         <div class="panel-body">
                                             <div class="news_h">
                                                 <ul class="demo2">
-                                                    <li class="news-item">Process to pay other state road tax of single vehicle..<br /><a id="j_idt62" href="#" class="ui-commandlink ui-widget" onclick="PF('process1').show();;PrimeFaces.ab({s:&quot;j_idt62&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                    <li class="news-item">Process to pay other state road tax of single
+                                                        vehicle..<br /><a id="j_idt62" href="#" class="ui-commandlink ui-widget" onclick="PF('process1').show();;PrimeFaces.ab({s:&quot;j_idt62&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
                                                             more...</a></li>
-                                                    <li class="news-item">Process to check your pending transaction of single vehicle..<br /><a id="j_idt65" href="#" class="ui-commandlink ui-widget" onclick="PF('process2').show();;PrimeFaces.ab({s:&quot;j_idt65&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                    <li class="news-item">Process to check your pending transaction of
+                                                        single vehicle..<br /><a id="j_idt65" href="#" class="ui-commandlink ui-widget" onclick="PF('process2').show();;PrimeFaces.ab({s:&quot;j_idt65&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
                                                             more...</a></li>
 
-                                                    <li class="news-item">Process to recheck the fail transaction of single vehicle..<br /><a id="j_idt68" href="#" class="ui-commandlink ui-widget" onclick="PF('process3').show();;PrimeFaces.ab({s:&quot;j_idt68&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                    <li class="news-item">Process to recheck the fail transaction of
+                                                        single vehicle..<br /><a id="j_idt68" href="#" class="ui-commandlink ui-widget" onclick="PF('process3').show();;PrimeFaces.ab({s:&quot;j_idt68&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
                                                             more...</a></li>
-                                                    <li class="news-item">Process to signup for tax payment of more then one vehicle in single transaction..<br /><a id="j_idt71" href="#" class="ui-commandlink ui-widget" onclick="PF('process4').show();;PrimeFaces.ab({s:&quot;j_idt71&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                    <li class="news-item">Process to signup for tax payment of more then
+                                                        one vehicle in single transaction..<br /><a id="j_idt71" href="#" class="ui-commandlink ui-widget" onclick="PF('process4').show();;PrimeFaces.ab({s:&quot;j_idt71&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
                                                             more...</a></li>
-                                                    <li class="news-item">Process to pay other state road tax of more then one vehicle..<br /><a id="j_idt74" href="#" class="ui-commandlink ui-widget" onclick="PF('process5').show();;PrimeFaces.ab({s:&quot;j_idt74&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                    <li class="news-item">Process to pay other state road tax of more
+                                                        then one vehicle..<br /><a id="j_idt74" href="#" class="ui-commandlink ui-widget" onclick="PF('process5').show();;PrimeFaces.ab({s:&quot;j_idt74&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
                                                             more...</a></li>
-                                                    <li class="news-item">Process to Generate Memo and pay fee of ODC..<br /><a id="j_idt77" href="#" class="ui-commandlink ui-widget" onclick="PF('process6').show();;PrimeFaces.ab({s:&quot;j_idt77&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
+                                                    <li class="news-item">Process to Generate Memo and pay fee of
+                                                        ODC..<br /><a id="j_idt77" href="#" class="ui-commandlink ui-widget" onclick="PF('process6').show();;PrimeFaces.ab({s:&quot;j_idt77&quot;,f:&quot;master_Layout_form&quot;});return false;">Read
                                                             more...</a></li>
                                                 </ul>
                                             </div>
@@ -245,8 +258,25 @@ mysqli_close($conn);
                                 <div class="ui-grid-col-12">
                                     <p>
                                         <span>CHECKPOST</span>
-                                        <font style="font-size: 11pt;"> portal is meant to be a common platform from where various checkpost services are provided to citizens, as and when they are developed by the department. These services are being started for online checkpost tax payment of vehicles. The owners of these vehicles can access to the portal from any internet access point, and deposit their due taxes through net banking facility. This system will save them the trouble of physically coming to the transport office, while the department will be able to collect their taxes in a cashless and seamless way.
-                                            Once the user logs on to the system and provides the required information about the vehicle, the software calculates and displays the tax amount payable. If the user accepts to make the payment, the portal redirects him to selected bank or treasury site. The user then makes the payment from his bank account through secure Internet Banking. Once the transaction is complete, the software generates a detailed receipt, which can be printed by the user for his records. For checking the authenticity of receipt, the transport department officials will be able to cross-check the payment details by logging on to the portal using this web-based software. They can also view / print various reports which will be generated for officials of the transport department.</font>
+                                        <font style="font-size: 11pt;"> portal is meant to be a common platform from
+                                            where various checkpost services are provided to citizens, as and when they
+                                            are developed by the department. These services are being started for online
+                                            checkpost tax payment of vehicles. The owners of these vehicles can access
+                                            to the portal from any internet access point, and deposit their due taxes
+                                            through net banking facility. This system will save them the trouble of
+                                            physically coming to the transport office, while the department will be able
+                                            to collect their taxes in a cashless and seamless way.
+                                            Once the user logs on to the system and provides the required information
+                                            about the vehicle, the software calculates and displays the tax amount
+                                            payable. If the user accepts to make the payment, the portal redirects him
+                                            to selected bank or treasury site. The user then makes the payment from his
+                                            bank account through secure Internet Banking. Once the transaction is
+                                            complete, the software generates a detailed receipt, which can be printed by
+                                            the user for his records. For checking the authenticity of receipt, the
+                                            transport department officials will be able to cross-check the payment
+                                            details by logging on to the portal using this web-based software. They can
+                                            also view / print various reports which will be generated for officials of
+                                            the transport department.</font>
                                     </p>
                                 </div>
                             </div>
@@ -346,8 +376,10 @@ mysqli_close($conn);
                                                 </div>
                                             </div>
                                         </div>
-                                        <div style="float: left;margin-bottom: 10px;">Don't have an account ! <a id="j_idt94" href="#" class="ui-commandlink ui-widget" aria-label="Register for payment of multiple vehilces in single cart." onclick="PrimeFaces.ab({s:&quot;j_idt94&quot;,f:&quot;master_Layout_form&quot;});return false;" style="color:#007acc;text-decoration: underline;font-weight: bold;" title="Register for payment of multiple vehilces in single cart.">Sign up</a> here</div>
-                                        <div style="float: right;margin-bottom: 10px;margin-right: 70px;"><a href="/checkpost/faces/admin/pages/ForgetPassword.xhtml" style="color:#007acc;text-decoration: underline;font-weight: bold;">Forget Password</a></div>
+                                        <div style="float: left;margin-bottom: 10px;">Don't have an account ! <a id="j_idt94" href="#" class="ui-commandlink ui-widget" aria-label="Register for payment of multiple vehilces in single cart." onclick="PrimeFaces.ab({s:&quot;j_idt94&quot;,f:&quot;master_Layout_form&quot;});return false;" style="color:#007acc;text-decoration: underline;font-weight: bold;" title="Register for payment of multiple vehilces in single cart.">Sign
+                                                up</a> here</div>
+                                        <div style="float: right;margin-bottom: 10px;margin-right: 70px;"><a href="/checkpost/faces/admin/pages/ForgetPassword.xhtml" style="color:#007acc;text-decoration: underline;font-weight: bold;">Forget
+                                                Password</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -500,24 +532,32 @@ mysqli_close($conn);
             });
         </script>
         <div id="payment_dialog1" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog1_title" class="ui-dialog-title">Process of paying road tax for other state...</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog1_title" class="ui-dialog-title">Process of paying road tax for other
+                    state...</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
             <div class="ui-dialog-content ui-widget-content" id="payment_dialog1_content">
                 <ol>
                     <li> Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li><br />
-                    <li> Select the state where you want to go from <font class="dialog-highlight-text">'Select State'</font> drop down menu.</li><br />
-                    <li> Select service name from <font class="dialog-highlight-text">'Service Name'</font> drop down menu.</li><br />
-                    <li> Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.</li><br />
+                    <li> Select the state where you want to go from <font class="dialog-highlight-text">'Select State'
+                        </font> drop down menu.</li><br />
+                    <li> Select service name from <font class="dialog-highlight-text">'Service Name'</font> drop down
+                        menu.</li><br />
+                    <li> Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.
+                    </li><br />
                     <li> Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li><br />
                     <li> Fill rest of the fields which are not filled automatically.</li><br />
                     <li> In case fields are not filled automatically then enter the details manually.</li><br />
-                    <li> Click <font class="dialog-highlight-text">'Calculate Tax'</font> button to calculate the tax according to state notification.</li><br />
-                    <li> Click <font class="dialog-highlight-text">'Pay Tax'</font> button to pay the calculated tax.</li><br />
+                    <li> Click <font class="dialog-highlight-text">'Calculate Tax'</font> button to calculate the tax
+                        according to state notification.</li><br />
+                    <li> Click <font class="dialog-highlight-text">'Pay Tax'</font> button to pay the calculated tax.
+                    </li><br />
                     <li> It opens the payment gateway of VAHAN.</li><br />
-                    <li> Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li><br />
+                    <li> Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font>
+                        button.</li><br />
                     <li> And then follow the screen to pay tax.</li><br />
                     <li> After paying tax bank will redirect to the Checkpost application.</li><br />
                     <li> In case your transaction is Success it will show the successful receipt.</li><br />
-                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li><br />
+                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate
+                        the payment.</li><br />
                     <li> Print the receipt.</li>
                 </ol>
                 <div class="ui-grid-row top-space bottom-space">
@@ -546,16 +586,21 @@ mysqli_close($conn);
             });
         </script>
         <div id="payment_dialog2" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog2_title" class="ui-dialog-title">Process to check your pending transaction of single vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog2_title" class="ui-dialog-title">Process to check your pending transaction of
+                    single vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
             <div class="ui-dialog-content ui-widget-content" id="payment_dialog2_content">
                 <ol>
                     <li> Select the <font class="dialog-highlight-text">'Check Pending Transaction'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li><br />
-                    <li> It will show <font class="dialog-highlight-text">'Check Pending Transaction'</font> screen.</li><br />
-                    <li> Enter Vehicle No. and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li><br />
-                    <li> Click the button available in <font class="dialog-highlight-text">'Check Status'</font> column of below table.</li><br />
+                    <li> It will show <font class="dialog-highlight-text">'Check Pending Transaction'</font> screen.
+                    </li><br />
+                    <li> Enter Vehicle No. and click <font class="dialog-highlight-text">'Get Details'</font> button to
+                        fill the details.</li><br />
+                    <li> Click the button available in <font class="dialog-highlight-text">'Check Status'</font> column
+                        of below table.</li><br />
                     <li> It will print the receipt according to the status sent by bank.</li><br />
                     <li> In case your transaction is Success it will show the successful receipt.</li><br />
-                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li>
+                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate
+                        the payment.</li>
                 </ol>
                 <div class="ui-grid-row top-space bottom-space">
                     <div class="ui-grid-col-12 center-position"><button id="j_idt128" name="j_idt128" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process2').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt128&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button>
@@ -583,17 +628,24 @@ mysqli_close($conn);
             });
         </script>
         <div id="payment_dialog3" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog3_title" class="ui-dialog-title">Process to recheck the fail transaction of single vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog3_title" class="ui-dialog-title">Process to recheck the fail transaction of single
+                    vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
             <div class="ui-dialog-content ui-widget-content" id="payment_dialog3_content">
                 <ol>
                     <li> Select the <font class="dialog-highlight-text">'Reverify Fail Transaction'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li><br />
-                    <li> It will show <font class="dialog-highlight-text">'Reverify Fail Transaction'</font> screen.</li><br />
-                    <li> Choose desired state from <font class="dialog-highlight-text">'From State Name'</font> combo box for which you have done the payment.</li><br />
-                    <li> Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details of the vehicle.</li><br />
-                    <li> Choose the correct <font class="dialog-highlight-text">'Payment id'</font> click the button available in <font class="dialog-highlight-text">'Reverify'</font> column of below table.</li><br />
+                    <li> It will show <font class="dialog-highlight-text">'Reverify Fail Transaction'</font> screen.
+                    </li><br />
+                    <li> Choose desired state from <font class="dialog-highlight-text">'From State Name'</font> combo
+                        box for which you have done the payment.</li><br />
+                    <li> Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details of the
+                        vehicle.</li><br />
+                    <li> Choose the correct <font class="dialog-highlight-text">'Payment id'</font> click the button
+                        available in <font class="dialog-highlight-text">'Reverify'</font> column of below table.</li>
+                    <br />
                     <li> It will print the receipt according to the status sent by bank.</li><br />
                     <li> In case your transaction is Success it will show the successful receipt.</li><br />
-                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li>
+                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate
+                        the payment.</li>
                 </ol>
                 <div class="ui-grid-row top-space bottom-space">
                     <div class="ui-grid-col-12 center-position"><button id="j_idt131" name="j_idt131" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('process3').hide();},function(event){PrimeFaces.ab({s:&quot;j_idt131&quot;,f:&quot;master_Layout_form&quot;});return false;}]);" type="submit"><span class="ui-button-text ui-c">Close</span></button>
@@ -621,7 +673,8 @@ mysqli_close($conn);
             });
         </script>
         <div id="payment_dialog4" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog4_title" class="ui-dialog-title">Process to signup for tax payment of more then one vehicle in single transaction..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog4_title" class="ui-dialog-title">Process to signup for tax payment of more then
+                    one vehicle in single transaction..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
             <div class="ui-dialog-content ui-widget-content" id="payment_dialog4_content">
                 <ol>
                     <li> Click link shown in login box as <font class="dialog-highlight-text">'Signup here'</font>
@@ -630,12 +683,15 @@ mysqli_close($conn);
                     <li> Select state name where you belongs to.</li><br />
                     <li> Enter desired <font class="dialog-highlight-text">'User id.'</font>
                     </li><br />
-                    <li> Fill all data with correct <font class="dialog-highlight-text">'Mobile No.'</font> to get OTP, without OTP you are unable to register.</li><br />
-                    <li> Click on <font class="dialog-highlight-text">'Generate OTP'</font> button to get OTP on mobile.</li><br />
+                    <li> Fill all data with correct <font class="dialog-highlight-text">'Mobile No.'</font> to get OTP,
+                        without OTP you are unable to register.</li><br />
+                    <li> Click on <font class="dialog-highlight-text">'Generate OTP'</font> button to get OTP on mobile.
+                    </li><br />
                     <li> Enter <font class="dialog-highlight-text">'OTP'</font> and desired <font class="dialog-highlight-text">'Password'</font>.</li><br />
                     <li> Enter captcha shown on the box.</li><br />
                     <li> Click <font class="dialog-highlight-text">'Save'</font> button to create user id.</li><br />
-                    <li> It will open message box that shows <font class="dialog-highlight-text">'User ID'</font>.</li><br />
+                    <li> It will open message box that shows <font class="dialog-highlight-text">'User ID'</font>.</li>
+                    <br />
                     <li> Please note down your <font class="dialog-highlight-text">'User ID'</font> to login.</li><br />
                 </ol>
                 <div class="ui-grid-row top-space bottom-space">
@@ -664,27 +720,34 @@ mysqli_close($conn);
             });
         </script>
         <div id="payment_dialog5" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog5_title" class="ui-dialog-title">Process to pay other state road tax of more then one vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog5_title" class="ui-dialog-title">Process to pay other state road tax of more then
+                    one vehicle..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
             <div class="ui-dialog-content ui-widget-content" id="payment_dialog5_content">
                 <ol>
                     <li> Enter <font class="dialog-highlight-text">'User ID'</font> and <font class="dialog-highlight-text">'Password'</font> generated with <font class="dialog-highlight-text">'Signup here'</font> link.</li><br />
                     <li> Enter captcha as shown in the image.</li><br />
                     <li> Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Select Menu'</font> drop down menu.</li><br />
-                    <li> Select service Name from <font class="dialog-highlight-text">'Service Name'</font> drop down menu.</li><br />
-                    <li> Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.</li><br />
+                    <li> Select service Name from <font class="dialog-highlight-text">'Service Name'</font> drop down
+                        menu.</li><br />
+                    <li> Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.
+                    </li><br />
                     <li> Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li><br />
                     <li> Fill rest of the fields which are not filled automatically.</li><br />
                     <li> In case fields are not filled automatically then enter the details manually.</li><br />
-                    <li> Click on <font class="dialog-highlight-text">'Calculate Tax'</font> button to calculate the tax according to state notification.</li><br />
+                    <li> Click on <font class="dialog-highlight-text">'Calculate Tax'</font> button to calculate the tax
+                        according to state notification.</li><br />
                     <li> Click on <font class="dialog-highlight-text">'Add to Cart'</font> button.</li><br />
                     <li> If you want to pay tax for more than one vehicle follow the steps from 6 to 10.</li><br />
-                    <li> If you have added all the vehicles(for which you want to make payment) to the cart then click on <font class="dialog-highlight-text">'Pay Tax'</font> button to pay tax.</li><br />
+                    <li> If you have added all the vehicles(for which you want to make payment) to the cart then click
+                        on <font class="dialog-highlight-text">'Pay Tax'</font> button to pay tax.</li><br />
                     <li> It opens the payment gateway of VAHAN.</li><br />
-                    <li> Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li><br />
+                    <li> Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font>
+                        button.</li><br />
                     <li> And then follow the screen to pay tax.</li><br />
                     <li> After paying tax bank will redirect to the Checkpost application.</li><br />
                     <li> In case your transaction is Success it will show the successful receipt.</li><br />
-                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate the payment.</li><br />
+                    <li> In case your transaction is Fail it will show the failure message. Now you can again initiate
+                        the payment.</li><br />
                     <li> Print the receipt.</li>
                 </ol>
                 <div class="ui-grid-row top-space bottom-space">
@@ -713,44 +776,63 @@ mysqli_close($conn);
             });
         </script>
         <div id="payment_dialog6" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="background-color: #d6e7ff;font-size: 11pt;">
-            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog6_title" class="ui-dialog-title">Process to Generate Memo and pay fee of ODC..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="payment_dialog6_title" class="ui-dialog-title">Process to Generate Memo and pay fee of
+                    ODC..</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div>
             <div class="ui-dialog-content ui-widget-content" id="payment_dialog6_content">
                 <ol>
                     <li>Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li>
                     <li>Select the state where you want to go from 'Select State' drop down menu.</li>
-                    <li>Select service name from <font class="dialog-highlight-text">'Service Name'</font> as <font class="dialog-highlight-text">'ADVANCE PAYMENT OF ODC EXEMPTION FEE'</font> from drop down menu.</li>
-                    <li>Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.</li>
+                    <li>Select service name from <font class="dialog-highlight-text">'Service Name'</font> as <font class="dialog-highlight-text">'ADVANCE PAYMENT OF ODC EXEMPTION FEE'</font> from drop down
+                        menu.</li>
+                    <li>Click <font class="dialog-highlight-text">'Go'</font> button to open the vehicle details form.
+                    </li>
                     <li>Enter <font class="dialog-highlight-text">'Vehicle No.'</font> and click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li>
                     <!--                &lt;li&gt;Fill rest of the fields which are not filled automatically.&lt;/li&gt;-->
                     <li>In case fields are not filled automatically then enter the details manually.</li>
-                    <li>In case nature of goods of your vehicle is <font class="dialog-highlight-text">'INDIVISIBLE'</font> then first generate memo. And you have two options.
+                    <li>In case nature of goods of your vehicle is <font class="dialog-highlight-text">'INDIVISIBLE'
+                        </font> then first generate memo. And you have two options.
                         <ol>
                             <li type="A">You can pay the fee at the same time by clicking on <font class="dialog-highlight-text">'Pay Fee'</font> button.
                                 <ol>
-                                    <li type="i">It opens the payment gateway of <font class="dialog-highlight-text">VAHAN</font>.</li>
+                                    <li type="i">It opens the payment gateway of <font class="dialog-highlight-text">
+                                            VAHAN</font>.</li>
                                     <li type="i">Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li>
                                     <li type="i">And then follow the screen to Pay Fee.</li>
                                     <li type="i">After paying fee bank will redirect to the Checkpost application.</li>
-                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Success</font> it will show the successful receipt.</li>
-                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Fail</font> it will show the failure message. Now you can again initiate the payment.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Success
+                                        </font> it will show the successful receipt.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Fail
+                                        </font> it will show the failure message. Now you can again initiate the
+                                        payment.</li>
                                     <li type="i">Print the Memo receipt.</li>
                                     <li type="i">Print the Fees receipt.</li>
                                 </ol>
                             </li>
-                            <li type="A">Or if you want to make payment later then note down your memo no and follow below steps
+                            <li type="A">Or if you want to make payment later then note down your memo no and follow
+                                below steps
                                 <ol>
-                                    <li type="i">Select the <font class="dialog-highlight-text">'Tax Payment'</font> from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.</li>
+                                    <li type="i">Select the <font class="dialog-highlight-text">'Tax Payment'</font>
+                                        from <font class="dialog-highlight-text">'Payment'</font> menu on home screen.
+                                    </li>
                                     <li type="i">Select the state where you want to go from <font class="dialog-highlight-text">'Select State'</font> drop down menu.</li>
-                                    <li type="i">Select service name from <font class="dialog-highlight-text">'Service Name'</font> as <font class="dialog-highlight-text">'PAYMENT OF PENDING ODC EXEMPTION FEE'</font> from drop down menu.</li>
+                                    <li type="i">Select service name from <font class="dialog-highlight-text">'Service
+                                            Name'</font> as <font class="dialog-highlight-text">'PAYMENT OF PENDING ODC
+                                            EXEMPTION FEE'</font> from drop down menu.</li>
                                     <li type="i">Type the Memo no in text field.</li>
-                                    <li type="i">Click <font class="dialog-highlight-text">'Get Details'</font> button to fill the details.</li>
-                                    <li type="i">Click <font class="dialog-highlight-text">'Pay Fee'</font> button to pay the calculated Fee.</li>
-                                    <li type="i">It opens the payment gateway of <font class="dialog-highlight-text">VAHAN</font>.</li>
+                                    <li type="i">Click <font class="dialog-highlight-text">'Get Details'</font> button
+                                        to fill the details.</li>
+                                    <li type="i">Click <font class="dialog-highlight-text">'Pay Fee'</font> button to
+                                        pay the calculated Fee.</li>
+                                    <li type="i">It opens the payment gateway of <font class="dialog-highlight-text">
+                                            VAHAN</font>.</li>
                                     <li type="i">Choose payment gateway and click on <font class="dialog-highlight-text">'Continue'</font> button.</li>
                                     <li type="i">And then follow the screen to Pay Fee.</li>
                                     <li type="i">After paying fee bank will redirect to the Checkpost application.</li>
-                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Success</font> it will show the successful receipt.</li>
-                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Fail</font> it will show the failure message. Now you can again initiate the payment.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Success
+                                        </font> it will show the successful receipt.</li>
+                                    <li type="i">In case your transaction is <font class="dialog-highlight-text">Fail
+                                        </font> it will show the failure message. Now you can again initiate the
+                                        payment.</li>
                                     <li type="i">Print the Fee receipt.</li>
                                 </ol>
                             </li>
@@ -783,7 +865,9 @@ mysqli_close($conn);
             });
         </script>
     </div>
-    <div id="j_idt143" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt144" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div>
+    <div id="j_idt143" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow">
+        <img id="j_idt144" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" />
+    </div>
     <script id="j_idt143_s" type="text/javascript">
         $(function() {
             PrimeFaces.cw("BlockUI", "masterLayoutVar", {

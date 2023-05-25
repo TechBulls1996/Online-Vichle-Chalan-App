@@ -11,6 +11,14 @@ $env = [
     'DBUSERNAME' => 'u918699320_rajat',
     'DBPASS' => 'Rajat@232',
 ];
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+    $env = [
+        'DB' => 'raja',
+        'HOST' => 'localhost',
+        'DBUSERNAME' => 'root',
+        'DBPASS' => '',
+    ];
+}
 
 $servername = $env["HOST"];
 $username = $env["DBUSERNAME"];
