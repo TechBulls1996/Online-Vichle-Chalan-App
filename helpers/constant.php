@@ -1,9 +1,6 @@
 <?php
-if (!isset($env)) {
-    //read .env file
-    $env = parse_ini_file('.env');
-}
-$URL = $env["URL"];
+
+$URL = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];;
 
 $VEHICLE_TYPE = [
     "CONTRACT CARRIAGE/PASSENGER VEHICLES",
@@ -42,4 +39,8 @@ $PAYMENT_MODE = [
 $WEIGHT = [
     "Laden Weight",
     "Seating Capacity"
+];
+
+$PERMIT_TYPE = [
+    "NOT APPLICABLE", "TOURIST PERMIT", "SPECIAL PERMIT", "TEMPRORARY PERMIT", "NATIONAL PERMIT"
 ];

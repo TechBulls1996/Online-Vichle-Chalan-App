@@ -1,5 +1,68 @@
 <?php
 include_once('./includes/header.php');
+include_once('./includes/connection.php');
+
+// Check if the table exists
+$tableName = 'users';
+
+//$query = "DROP TABLE IF EXISTS $tableName";
+//$result = mysqli_query($conn, $query);
+
+$query = "SHOW TABLES LIKE '$tableName'";
+$result = mysqli_query($conn, $query);
+
+if (mysqli_num_rows($result) == 0) {
+    // Table doesn't exist, create it
+    $createQuery = "CREATE TABLE $tableName (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(255),
+        password VARCHAR(255),
+        status VARCHAR(30) DEFAULT 'active'
+        type VARCHAR(255) DEFAULT 'user',
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
+
+    // Execute the create query
+    $createResult = mysqli_query($conn, $createQuery);
+
+    if ($createResult) {
+        echo "Table created successfully.";
+    } else {
+        echo "Error creating table: " . mysqli_error($conn);
+    }
+}
+
+if (isset($_POST) && isset($_POST['txtLogin'])) {
+    $email = @$_POST['txtLogin'];
+    $password = @$_POST['CaptchaID'];
+    $query = "SELECT * FROM $tableName WHERE username = '$email' AND type='user' AND status='active' ";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+        // User with the given email exists, check the password
+        $row = mysqli_fetch_assoc($result);
+        $hashedPassword = $row['password'];
+
+        if (password_verify($password, $hashedPassword)) {
+            // Password is correct, user is authenticated
+            session_start();
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['login'] = true;
+            header("Location: taxCollection.php");
+        } else {
+            // Password is incorrect
+            echo "Invalid password.";
+        }
+    } else {
+        // User with the given email doesn't exist
+        $login_err = "Login failed.";
+        //echo "Error record: " . mysqli_error($conn);
+    }
+}
+// Close the database connection
+mysqli_close($conn);
+
+
 ?>
 <script type="text/javascript" language="javascript">
     $(document).ready(function() {
@@ -32,11 +95,6 @@ include_once('./includes/header.php');
         });
     });
 </script>
-<script type="text/javascript" src="/checkpost/faces/javax.faces.resource/md5.js?ln=js"></script>
-<script type="text/javascript" src="/checkpost/faces/javax.faces.resource/sha256.js?ln=js"></script>
-<script type="text/javascript" src="/checkpost/faces/javax.faces.resource/jquery.marquee.min.js?ln=side-js"></script>
-<script type="text/javascript" src="/checkpost/faces/javax.faces.resource/jquery.marquee.min.js?ln=jquery"></script>
-<script type="text/javascript" src="/checkpost/faces/javax.faces.resource/jquery.flexslider-min.js?ln=jquery"></script>
 <script type="text/javascript">
     $(window).load(function() {
         $('.flexslider').flexslider({
@@ -53,7 +111,7 @@ include_once('./includes/header.php');
 </script>
 </head>
 
-<form id="master_Layout_form" name="master_Layout_form" method="post" action="/checkpost/faces/login.xhtml" enctype="application/x-www-form-urlencoded">
+<form id="master_Layout_form" name="master_Layout_form" method="post" action="/login.php" enctype="application/x-www-form-urlencoded">
     <input type="hidden" name="master_Layout_form" value="master_Layout_form" />
 
 
@@ -136,7 +194,7 @@ include_once('./includes/header.php');
             <div class="container1">
                 <div id="main">
                     <div class="ui-grid-row center-position" id="skip-main-content">
-                        <div class="ui-grid-col-12"><img src="/checkpost/faces/javax.faces.resource/NewImage.gif?ln=images" />
+                        <div class="ui-grid-col-12"><img src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/NewImage.gif?ln=images" />
                             <font style="color:#FF0000!important;font-size:15pt!important;">Other state Temporary Permit for all CHECKPOST of Tamil Nadu enabled.Kindly use the facility. Checkpost module was inaugurated by Hon. Transport Minister,Kerala at Walayar Checkpost today 21 Oct,2022.</font>
                         </div>
                     </div>
@@ -199,6 +257,13 @@ include_once('./includes/header.php');
                                     <div class="login-form text-center">
                                         <div class="heading-login">
                                             <h2>Authenticated Login</h2>
+                                            <?php
+                                            if (isset($login_err)) {
+                                            ?>
+                                                <p class="text-danger"><?= $login_err ?></p>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <div class="form-group">
                                             <div class="input-group">
@@ -232,7 +297,7 @@ include_once('./includes/header.php');
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-md-2"></div>
-                                                    <div class="col-md-5 col-sm-12 left-position"><img id="captchaImage" src="/checkpost/DispplayCaptcha?txtp_cd=2&amp;bkgp_cd=2&amp;noise_cd=2&amp;gimp_cd=3&amp;txtp_length=5&amp;pfdrid_c=true527177114&amp;pfdrid_c=true" alt="" class=" captch-but" />
+                                                    <div class="col-md-5 col-sm-12 left-position"><img id="captchaImage" src="https://checkpost.parivahan.gov.in/checkpost/DispplayCaptcha?txtp_cd=2&amp;bkgp_cd=2&amp;noise_cd=2&amp;gimp_cd=3&amp;txtp_length=5&amp;pfdrid_c=true527177114&amp;pfdrid_c=true" alt="" class=" captch-but" />
                                                     </div>
                                                     <div class="col-md-2 col-sm-12 center-position"><button id="j_idt89" name="j_idt89" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only vahan-captcha-refresh" onclick="PrimeFaces.ab({s:&quot;j_idt89&quot;,f:&quot;master_Layout_form&quot;,u:&quot;captchaImage&quot;});return false;" style="height: 30px;float: bottom;" type="submit"><span class="ui-button-icon-left ui-icon ui-c ui-icon-refresh"></span><span class="ui-button-text ui-c">ui-button</span></button>
                                                         <script id="j_idt89_s" type="text/javascript">
@@ -406,7 +471,7 @@ include_once('./includes/header.php');
                                 </div>
                                 <div class="ui-grid-col-2">
                                     <div class="ui-grid-row  left-position ">
-                                        <div class="ui-grid-col-12  "><img id="j_idt118" src="/checkpost/faces/javax.faces.resource/nic-logo.png?ln=images" alt="Parivahan Sewa" />
+                                        <div class="ui-grid-col-12  "><img id="j_idt118" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/nic-logo.png?ln=images" alt="Parivahan Sewa" />
                                         </div>
                                     </div>
                                 </div>
@@ -718,7 +783,7 @@ include_once('./includes/header.php');
             });
         </script>
     </div>
-    <div id="j_idt143" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt144" src="/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div>
+    <div id="j_idt143" class="ui-blockui-content ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"><img id="j_idt144" src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/ajax_loader_blue.gif?ln=images" alt="" /></div>
     <script id="j_idt143_s" type="text/javascript">
         $(function() {
             PrimeFaces.cw("BlockUI", "masterLayoutVar", {

@@ -5,23 +5,23 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// if (!isset($env)) {
-//     //read .env file
-//     $env = parse_ini_file('.env');
-// }
+$env = [
+    'DB' => 'u918699320_rajat',
+    'HOST' => 'localhost',
+    'DBUSERNAME' => 'u918699320_rajat',
+    'DBPASS' => 'Rajat@232',
+];
 
-// $servername = $env["HOST"];
-// $username = $env["DBUSERNAME"];
-// $password = $env["DBPASS"];
-// $database = $env["DB"];
+$servername = $env["HOST"];
+$username = $env["DBUSERNAME"];
+$password = $env["DBPASS"];
+$database = $env["DB"];
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "raja";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
+
 
 // Check connection
 if ($conn->connect_error) {

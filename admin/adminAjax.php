@@ -2,20 +2,32 @@
 include_once('../includes/connection.php');
 
 if (isset($_POST['login'])) {
+    $tableName = 'users';
     $username = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['pass']);
+    //$myHash = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "SELECT * FROM `users` WHERE username = '$username' and email = '$email' and `type` = 'admin'";
-    $res = mysqli_query($conn, $sql);
-    $total = mysqli_num_rows($res);
-    if ($total > 0) {
-        $row = mysqli_fetch_assoc($res);
-        $id = $row['id'];
-        $_SESSION["ID"] = $id;
-        $_SESSION["USERNAME"] = $row['username'];
-        // header('location:admin.php');
-        $sucMsg = array('status' => 200);
-        echo json_encode($sucMsg);
+    $query = "SELECT * FROM $tableName WHERE username = '$username' AND type='admin'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) == 1) {
+        // User with the given email exists, check the password
+        $row = mysqli_fetch_assoc($result);
+        $hashedPassword = $row['password'];
+
+        if (password_verify($password, $hashedPassword)) {
+            // Password is correct, user is authenticated
+
+            $_SESSION['USERNAME'] = $row['username'];
+            $_SESSION['LOGIN'] = true;
+            $_SESSION['ID'] = $row['id'];
+
+            $sucMsg = array('status' => 200);
+            echo json_encode($sucMsg);
+        } else {
+            $errMsg = array('msg' => 'please Enter Correct Login Details');
+            echo json_encode($errMsg);
+        }
     } else {
         $errMsg = array('msg' => 'Please Enter Correct Login Details');
         echo json_encode($errMsg);
@@ -28,7 +40,7 @@ if (isset($_POST['view'])) {
     $res = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($res);
     $name = $row['username'];
-    $email = $row['email'];
+    $email = $row['username'];
     $status = $row['status'];
     $viewMsg = array('name' => $name, 'email' => $email, 'status' => $status,);
     echo json_encode($viewMsg);
