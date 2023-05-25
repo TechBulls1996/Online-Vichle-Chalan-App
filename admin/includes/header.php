@@ -16,28 +16,25 @@ include_once('../includes/connection.php');
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Admin Panel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav me-auto">
+            <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link " href="/admin/admin.php">Home
-
-                        </a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/login.php">User login</a>
+                        <a class="nav-link" href="#">Features</a>
                     </li>
-
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
+            <h4 class="m-auto float-end me-5 text-white">Welcome <?php if (isset($_SESSION['USERNAME'])) {
+                                                                        echo $_SESSION['USERNAME'];
+                                                                    }; ?></h5>
+                <a class="btn btn-outline-warning nav-link text-white" href="logout.php">Logout</a>
         </div>
     </nav>
