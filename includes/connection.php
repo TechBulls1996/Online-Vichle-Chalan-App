@@ -17,6 +17,8 @@ $username = $env["DBUSERNAME"];
 $password = $env["DBPASS"];
 $database = $env["DB"];
 
+
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 

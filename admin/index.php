@@ -92,7 +92,7 @@ $MAINURL = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                 var remsg = $.parseJSON(result);
                 //console.log(remsg);
                 if (remsg.status == 200) {
-                    window.location.href = "<?= $MAINURL; ?>admin.php";
+                    window.location.href = "http://localhost/rajat-main/admin/admin.php";
                 } else {
                     $("#errMsg").html(remsg.msg);
                     $("#lofrm")[0].reset();
