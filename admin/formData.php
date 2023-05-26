@@ -105,6 +105,10 @@ $cols = array(
             '<td>' +
             d.total_tax +
             '</td>' +
+            '<td>Username:</td>' +
+            '<td>' +
+            d.username +
+            '</td>' +
             '</tr>' +
             '<tr>' +
             '<td>barrier_district:</td>' +
