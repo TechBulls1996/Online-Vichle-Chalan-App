@@ -41,9 +41,10 @@ $districts = json_decode($json_districts, true);
         }
     }, 50);
 </script>
-<form id="master_Layout_form" name="master_Layout_form" method="post" action="https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollectionMainOnline.xhtml" enctype="application/x-www-form-urlencoded">
+<form id="master_Layout_form" name="master_Layout_form" method="post" action="taxSubmit.php" enctype="application/x-www-form-urlencoded">
     <input type="hidden" name="selected_state" value="<?= $curState ?>" />
     <div>
+        <!-- <p>https://checkpost.parivahan.gov.in/checkpost/faces/public/payment/TaxCollectionMainOnline.xhtml</p> -->
         <div class="container-fluid">
             <div class="ui-grid ui-grid-responsive">
                 <div class="ui-grid-row top-space center-position contents-Space">
@@ -163,7 +164,8 @@ $districts = json_decode($json_districts, true);
                                                 <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
                                                     <ul id="j_idt218_items" class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset" role="listbox">
 
-                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select State---" tabindex="-1" role="option">---Select State---</li>
+                                                        <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="---Select State---" tabindex="-1" role="option">
+                                                            ---Select State---</li>
                                                         <?php
                                                         // Access the data
                                                         foreach ($states as $state => $code) {
@@ -188,7 +190,8 @@ $districts = json_decode($json_districts, true);
                                 </div>
                                 <div class="ui-grid-row">
                                     <div class="ui-grid-col-6">
-                                        <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit Type</label>
+                                        <label class="field-label resp-label-section"><label id="j_idt222" class="ui-outputlabel ui-widget field-label-mandate">Vehicle Permit
+                                                Type</label>
                                         </label>
                                         <div id="j_idt224" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
 
@@ -573,7 +576,8 @@ $districts = json_decode($json_districts, true);
                                 </div><br />
                                 <div class="ui-grid-row">
                                     <div class="ui-grid-col-3">
-                                        <label class="field-label resp-label-section"><label id="j_idt243" class="ui-outputlabel ui-widget field-label-mandate"> Permit Type</label>
+                                        <label class="field-label resp-label-section"><label id="j_idt243" class="ui-outputlabel ui-widget field-label-mandate"> Permit
+                                                Type</label>
                                         </label>
                                         <div id="cmb_payment_mode2" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox" aria-haspopup="true" aria-expanded="false">
 
@@ -680,12 +684,17 @@ $districts = json_decode($json_districts, true);
                                                 <table role="grid" style="width:98%;">
                                                     <thead id="taxList_head">
                                                         <tr role="row">
-                                                            <th id="taxList:j_idt260" class="ui-state-default" role="columnheader" aria-label="Sl. No." scope="col" style="width: 40px;"><span class="ui-column-title">Sl. No.</span></th>
+                                                            <th id="taxList:j_idt260" class="ui-state-default" role="columnheader" aria-label="Sl. No." scope="col" style="width: 40px;"><span class="ui-column-title">Sl.
+                                                                    No.</span></th>
                                                             <th id="taxList:j_idt262" class="ui-state-default" role="columnheader" aria-label="Particulars" scope="col"><span class="ui-column-title">Particulars</span></th>
-                                                            <th id="taxList:j_idt264" class="ui-state-default" role="columnheader" aria-label="Tax From" scope="col"><span class="ui-column-title">Tax
-                                                                    From</span></th>
-                                                            <th id="taxList:j_idt266" class="ui-state-default" role="columnheader" aria-label="Tax Upto" scope="col"><span class="ui-column-title">Tax
-                                                                    Upto</span></th>
+                                                            <th id="taxList:j_idt264" class="ui-state-default" role="columnheader" aria-label="Tax From" scope="col">
+                                                                <span class="ui-column-title">Tax
+                                                                    From</span>
+                                                            </th>
+                                                            <th id="taxList:j_idt266" class="ui-state-default" role="columnheader" aria-label="Tax Upto" scope="col">
+                                                                <span class="ui-column-title">Tax
+                                                                    Upto</span>
+                                                            </th>
                                                             <th id="taxList:j_idt268" class="ui-state-default" role="columnheader" aria-label="Amount" scope="col">
                                                                 <span class="ui-column-title">Amount</span>
                                                             </th>
