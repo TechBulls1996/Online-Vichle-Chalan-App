@@ -10,31 +10,30 @@ $cols = array(
 );
 
 $totalTax = 0;
-if ($_REQUEST['id']) {
-    $sql = "SELECT  SUM(total_tax) AS total_tax_sum FROM formData";
-    if (isset($_REQUEST['id'])) {
-        $sql = $sql . " WHERE uid = " . $_REQUEST['id'];
-    }
-    $result = mysqli_query($conn, $sql);
-
-    if ($result) {
-        $array = [];
-        while ($row = mysqli_fetch_assoc($result)) {
-            $array[] = $row;
-        }
-
-        $dataset = array(
-            "echo" => 1,
-            "totalrecords" => count($array),
-            "totaldisplayrecords" => count($array),
-            "data" => $array
-        );
-
-        echo json_encode($dataset);
-    } else {
-        echo "Error executing query: " . mysqli_error($conn);
-    }
+$sql = "SELECT  SUM(total_tax) AS total_tax_sum FROM formData";
+if (isset($_REQUEST['id'])) {
+    $sql = $sql . " WHERE uid = " . $_REQUEST['id'];
 }
+$result = mysqli_query($conn, $sql);
+
+if ($result) {
+    $array = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $array[] = $row;
+    }
+
+    $dataset = array(
+        "echo" => 1,
+        "totalrecords" => count($array),
+        "totaldisplayrecords" => count($array),
+        "data" => $array
+    );
+
+    echo json_encode($dataset);
+} else {
+    echo "Error executing query: " . mysqli_error($conn);
+}
+
 ?>
 <div class="container-fluid mt-3">
     <div class="row">
