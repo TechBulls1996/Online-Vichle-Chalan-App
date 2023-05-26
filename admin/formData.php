@@ -34,7 +34,7 @@ $cols = array(
                             echo "<th>$key</th>";
                         }
                         ?>
-                        <th scope="col">Action</th>
+
                     </tr>
                 </thead>
             </table>
@@ -67,11 +67,7 @@ $cols = array(
             <?php
             foreach (array_keys($cols) as $key) {
                 echo "{ data : '$key' },";
-            } ?> {
-                render: (data, type, row) => {
-                    return `<a href='formData.php?id=${row.id}' class='btn-sm btn btn-info'>View</a>  <button class='btn-sm btn btn-danger ms-2' id="delValue" value='${row.id}'>Delete</button>`;
-                }
-            }
+            } ?>
         ],
         "order": [
             [1, 'asc']
