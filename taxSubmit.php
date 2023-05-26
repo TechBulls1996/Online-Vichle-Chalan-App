@@ -73,12 +73,7 @@ $sql = "INSERT INTO " . $tableName . " (" . implode(', ', $columns) . ") VALUES 
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
-    echo "Record inserted successfully.";
-} else {
-    echo "Error inserting record: " . mysqli_error($conn);
-}
-// Close the database conn
-mysqli_close($conn);
+    //echo "Record inserted successfully.";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,6 +110,10 @@ mysqli_close($conn);
     function textRepeat() {
         var str = document.getElementById("regn_number").value + " / " + document.getElementById("payment_date").value + ", ";
         document.getElementById("regn_date").innerHTML = str.repeat(30);
+    }
+
+    function tabPrint(){
+        window.print();
     }
 </script>
 <style>
@@ -193,7 +192,7 @@ mysqli_close($conn);
 </style>
 </head>
 <body onLoad="textRepeat()">
-    <button onclick="window.print()">Print</button>
+    <button onclick="tabPrint()">Print</button>
     <!-- ,textRepeat()     -->
     <div class="watermark">
        <img id="j_idt10" src="<?= $URL ?>/assets/img/logo/HR_logo.png" alt="">
@@ -367,9 +366,13 @@ mysqli_close($conn);
             value="-3810988453043415378:-5599655139029637065" autocomplete="off">
     </form>
     <div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div>
-
-
-
-
 </body>
 </html>
+<?php
+}
+else {
+    echo "Error inserting record: " . mysqli_error($conn);
+}
+// Close the database conn
+mysqli_close($conn);
+?>
