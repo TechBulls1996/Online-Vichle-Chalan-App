@@ -25,6 +25,10 @@ if ($result) {
     echo "Error executing query: " . mysqli_error($conn);
 }
 
+if (!is_float($totalTax)) {
+    $totalTax = 0;
+}
+
 ?>
 <div class="container-fluid mt-3">
     <div class="row">
