@@ -32,7 +32,8 @@ function numberToWords($number)
         60 => 'Sixty',
         70 => 'Seventy',
         80 => 'Eighty',
-        90 => 'Ninety'
+        90 => 'Ninety',
+        100 => 'hundred',
     );
 
     $suffixes = array(
