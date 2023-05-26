@@ -204,8 +204,8 @@ if ($result) {
 
         <div class="table-responsive" style="margin-left: 30px;margin-right: 10px;margin-top: 10px;">
             <div id="j_idt16" class="ui-outputpanel ui-widget"><input id="regn_number" type="hidden" name="regn_number"
-                    value="HR50 5777">
-                <input id="payment_date" type="hidden" name="payment_date" value="26-MAY-2023 03:15 PM">
+                    value="<?= $post['vehicle_no'] ?>">
+                <input id="payment_date" type="hidden" name="payment_date" value="<?= date('d-M-Y h:i a') ?>">
                 <p id="regn_date"></p>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
