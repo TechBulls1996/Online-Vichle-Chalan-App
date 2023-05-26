@@ -37,7 +37,7 @@ include_once('./helpers/constant.php');
     <script>
     function textRepeat() {
         var str = document.getElementById("regn_number").value + " / " + document.getElementById("payment_date").value + ", ";
-        document.getElementById("regn_date").innerHTML = str.repeat(34);
+        document.getElementById("regn_date").innerHTML = str.repeat(30);
     }
 </script>
 <style>
@@ -79,17 +79,18 @@ include_once('./helpers/constant.php');
     }
 
     body {
-        width: 900px;
+    width: 900px;
     margin: auto;
+    overflow: hidden;
+    padding-top: 20px;
     }
     #regn_date {
         position: absolute;
         z-index: -1;
         opacity: 0.2;
         font-size: 20px;
-        filter: alpha(opacity=50);
-        /*                -webkit-transform: rotate(-45deg);
-                                -moz-transform: rotate(-45deg);*/
+        max-width: 860px;
+        
     }
 
     .border-un {
