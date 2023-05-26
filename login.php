@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) == 0) {
         username VARCHAR(255),
         email VARCHAR(255),
         password VARCHAR(255),
-        status VARCHAR(30) DEFAULT 'active'
+        status VARCHAR(30) DEFAULT 'active',
         type VARCHAR(255) DEFAULT 'user',
         createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
