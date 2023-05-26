@@ -36,6 +36,7 @@ function numberToWords($number)
     );
 
     $suffixes = array(
+        100 => 'hundred',
         1000 => 'Thousand',
         1000000 => 'Million',
         1000000000 => 'Billion',
