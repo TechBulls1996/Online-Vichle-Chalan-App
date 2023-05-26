@@ -1,12 +1,14 @@
 <?php
 include_once('includes/header.php');
 $cols = array(
+    'username' => '',
     'vehicle_no' => "HR29292918",
     'vehicle_type' => "2",
     'chassis_no' => "38383JWJJS",
     'owner_name' => "SACHINE",
     'mobileno' => "",
     'mv_tax' => "200",
+
 
 );
 ?>
@@ -101,9 +103,9 @@ $cols = array(
             '<td>' +
             d.total_tax +
             '</td>' +
-            '<td>Username:</td>' +
+            '<td>seating_cap:</td>' +
             '<td>' +
-            d.username +
+            d.seating_cap +
             '</td>' +
             '</tr>' +
             '<tr>' +
