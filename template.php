@@ -64,6 +64,9 @@ include_once('./helpers/constant.php');
         .watermark img {
             height: 300px;
         }
+        button{
+            display: none;
+        }
     }
 
     @media screen {
