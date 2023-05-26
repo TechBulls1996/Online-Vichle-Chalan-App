@@ -58,6 +58,11 @@ include_once('includes/header.php');
                                         <input type="email" class="form-control" id="email" required>
 
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="text" class="form-control" id="password" required>
+
+                                    </div>
 
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Status</label>
@@ -188,15 +193,17 @@ include_once('includes/header.php');
                     event.preventDefault();
                     let name = $("#username").val();
                     let email = $("#email").val();
+                    let password = $("#password").val();
                     let selstatus = $("#selStatus").val();
 
                     $.ajax({
                         url: 'adminajax.php',
                         method: 'post',
                         data: {
-                            name: name,
-                            email: email,
-                            selstatus: selstatus,
+                            name,
+                            email,
+                            password,
+                            selstatus,
                             insert: "insert"
                         },
                         success: function(result) {

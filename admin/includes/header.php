@@ -25,10 +25,10 @@ include_once('../includes/connection.php');
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/admin/admin.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="/login.php">User Login</a>
                     </li>
                 </ul>
             </div>

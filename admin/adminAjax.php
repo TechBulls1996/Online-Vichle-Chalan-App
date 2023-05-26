@@ -81,8 +81,13 @@ if (isset($_POST['insert'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $status = $_POST['selstatus'];
+    $password = $_POST['password'];
+    if (!isset($password)) {
+        $password = 'password123';
+    }
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO `users`(`username`, `email`, `status`) VALUES ('$name','$email','$status')";
+    $sql = "INSERT INTO `users`(`username`, `email`, `status`, `password`) VALUES ('$name','$email','$status', '$hashedPassword')";
     $res = mysqli_query($conn, $sql);
     $arr = array('msg' => 'Data inserted succesfully');
     echo json_encode($arr);
