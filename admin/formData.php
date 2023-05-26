@@ -50,7 +50,7 @@ $cols = array(
 <script>
     var table = $('#ajax-datatable').DataTable({
         "processing": true,
-        "ajax": "listajax.php?page=formdata&userId=<?= $_GET['id'] ?>",
+        "ajax": "listajax.php?page=formdata&userId=<?= @$_GET['id'] ?>",
         "columns": [{
                 className: 'dt-control',
                 orderable: false,
