@@ -48,8 +48,9 @@ if (isset($_POST) && isset($_POST['txtLogin'])) {
             // Password is correct, user is authenticated
             $_SESSION['username'] = $row['username'];
             $_SESSION['login'] = true;
-            header("Location: /taxCollection.php");
-            echo "<script> window.loacation='/taxCollection.php' </script>";
+            $_SESSION['ID'] = $row['id'];
+            @header("Location: /taxCollection.php");
+            echo "<script> window.location.href='/taxCollection.php' </script>";
         } else {
             // Password is incorrect
             echo "Invalid password.";

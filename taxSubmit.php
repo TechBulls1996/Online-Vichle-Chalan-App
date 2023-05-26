@@ -1,4 +1,3 @@
-<pre>
 <?php
 require_once("includes/connection.php");
 
@@ -54,8 +53,10 @@ if (mysqli_num_rows($result) == 0) {
 }
 
 // Assuming you have the $post array
+
 $post = $_POST;
 $post['total_tax'] = $post['mv_tax'] + $post['cess'] + $post['infra_cess'] + $post['permit_fee'] + $post['permit_variation'];
+$post['uid'] = $_SESSION['ID'];
 
 // Prepare the columns and values arrays
 $columns = array_keys($post);
@@ -65,11 +66,8 @@ $values = array_values($post);
 
 $placeholders = implode("','", $values);
 
-print_r($post);
-
 // Prepare the insert query
 $sql = "INSERT INTO " . $tableName . " (" . implode(', ', $columns) . ") VALUES ('" . $placeholders . "')";
-echo $sql;
 // Execute the query
 $result = mysqli_query($conn, $sql);
 
@@ -81,4 +79,3 @@ if ($result) {
 
 // Close the database conn
 mysqli_close($conn);
-?>

@@ -1,6 +1,6 @@
 <?php
 
-$URL = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];;
+$URL = "https://" . $_SERVER['SERVER_NAME'];
 
 $VEHICLE_TYPE = [
     "CONTRACT CARRIAGE/PASSENGER VEHICLES",

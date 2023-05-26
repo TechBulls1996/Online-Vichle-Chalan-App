@@ -8,7 +8,6 @@ $curState = $states_reverse[$_REQUEST['ib_state_input']];
 
 $json_districts = file_get_contents('./assets/json/districts.json');
 $districts = json_decode($json_districts, true);
-
 ?>
 
 <script type="text/javascript">
