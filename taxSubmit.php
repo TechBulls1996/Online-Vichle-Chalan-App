@@ -214,7 +214,7 @@ if ($result) {
                         <td width="61%" align="center">
                             <div
                                 style="font-size:18px; font-weight:bold; color:#000000;text-decoration:underline; padding-right:15px;">
-                                GOVERNMENT OF HARYANA</div>
+                                GOVERNMENT OF <?= $post['selected_state'] ?></div>
                             <div style="font-weight: bold;"><b>Department of Transport</b></div>
                             <div><b>Checkpost Tax e-Receipt</b></div>
                         </td>
@@ -231,19 +231,19 @@ if ($result) {
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody><tr>
                                     <td width="17%" class="row-p"><label>Registration No.</label></td>
-                                    <td width="76%" class="row-p"><span id="regn_no" style="font-weight: bold;">: HR50 5777</span> </td>
+                                    <td width="76%" class="row-p"><span id="regn_no" style="font-weight: bold;">: <?= $post['vehicle_no'] ?></span> </td>
                                 </tr>
                                 <tr>
                                     <td width="17%" class="row-p"><label>Receipt No.</label></td>
-                                    <td width="76%" class="row-p">: <span class="row-p1">HRT230526422718</span> </td>
+                                    <td width="76%" class="row-p">: <span class="row-p1">HRT230526422<?= rand(0,1000000); ?></span> </td>
                                 </tr>
                                 <tr>
                                     <td width="17%" class="row-p"><label>Payment Date</label></td>
-                                    <td width="76%" class="row-p">: <span class="row-p1">26-MAY-2023 03:15 PM</span> </td>
+                                    <td width="76%" class="row-p">: <span class="row-p1"><?= date('d-M-Y h:i a') ?></span> </td>
                                 </tr>
                                 <tr>
                                     <td width="17%" class="row-p"><label>Owner Name</label></td>
-                                    <td width="76%" class="row-p">: <span class="row-p1">SUKHVINDER</span> </td>
+                                    <td width="76%" class="row-p">: <span class="row-p1"><?= $post['owner_name'] ?></span> </td>
                                 </tr>
                             </tbody></table>
                         </td>
@@ -253,7 +253,7 @@ if ($result) {
                             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="">
                                 <tbody><tr>
                                     <td width="15%" class="row-p"><label>Chassis No.</label></td>
-                                    <td width="35%" class="row-p">: <span class="row-p1">154545</span> </td>
+                                    <td width="35%" class="row-p">: <span class="row-p1"><?= $post['chassis_no'] ?></span> </td>
                                   <td width="15%" class="row-p"><label>Tax Mode</label></td>
                                     <td width="35%" class="row-p">: <span class="row-p1">DAYS</span></td>
                                 </tr>
