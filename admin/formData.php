@@ -1,5 +1,6 @@
 <?php
 include_once('includes/header.php');
+include_once('../helpers/functions.php');
 $cols = array(
     'username' => '',
     'vehicle_no' => "HR29292918",
@@ -11,25 +12,15 @@ $cols = array(
 
 $totalTax = 0;
 $sql = "SELECT  SUM(total_tax) AS total_tax_sum FROM formData";
-if (isset($_REQUEST['id'])) {
+if (isset($_REQUEST['id']) && $_REQUEST['id'] > 0) {
     $sql = $sql . " WHERE uid = " . $_REQUEST['id'];
 }
+echo $sql;
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
-    $array = [];
-    while ($row = mysqli_fetch_assoc($result)) {
-        $array[] = $row;
-    }
-
-    $dataset = array(
-        "echo" => 1,
-        "totalrecords" => count($array),
-        "totaldisplayrecords" => count($array),
-        "data" => $array
-    );
-
-    echo json_encode($dataset);
+    $row = mysqli_fetch_assoc($result);
+    $totalTax = $row['total_tax_sum'];
 } else {
     echo "Error executing query: " . mysqli_error($conn);
 }
@@ -48,13 +39,30 @@ if ($result) {
             <h4 class="text-success ms-5" id="staMsg"></h4>
 
             <div class="row">
-                <div class="col-sm">
-                    <h3>Total Tax</h3>
-                    <p class="text-success">
-                        <?= $totalTax ?>
-                    </p>
+                <div class="col-sm mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Total Tax</h3>
+                            <p class="text-success"> RS <?= $totalTax ?></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm"></div>
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Total Tax in Numbers</h3>
+                            <p class="text-success"> RS <?= numberToWords($totalTax) ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <table class="table table-success table-striped table-hover p-2" id="ajax-datatable">
