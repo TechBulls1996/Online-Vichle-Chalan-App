@@ -1,7 +1,14 @@
 <?php
-include_once('./includes/header.php');
 include_once('./helpers/constant.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <style>
     @page {
         size: auto;
@@ -24,17 +31,23 @@ include_once('./helpers/constant.php');
         .watermark {
             color: #d0d0d0;
             position: absolute;
-            image-orientation: 45deg flip;
             font-size: 44px;
-            background-position-x: repeat-y !important;
             z-index: -1;
             opacity: 0.5;
-            filter: alpha(opacity=70);
-            left: 780px;
-            top: 90px;
+            filter: grayscale(1);
+            margin: auto;
+            display: block;
+            width: 100%;
+        }
+        .watermark img {
+            height: 300px;
         }
     }
 
+    body {
+        width: 900px;
+    margin: auto;
+    }
     #regn_date {
         position: absolute;
         z-index: -1;
@@ -230,7 +243,7 @@ include_once('./helpers/constant.php');
             value="-3810988453043415378:-5599655139029637065" autocomplete="off">
     </form>
     <div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div>
-</body>
+
 
 
 <script>
@@ -239,3 +252,5 @@ include_once('./helpers/constant.php');
         document.getElementById("regn_date").innerHTML = str.repeat(34);
     }
 </script>
+</body>
+</html>
