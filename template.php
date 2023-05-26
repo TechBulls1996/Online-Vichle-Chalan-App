@@ -50,11 +50,19 @@ include_once('./helpers/constant.php');
         .watermark {
             color: #d0d0d0;
             position: absolute;
+            font-size: 44px;
             z-index: -1;
-            left: 250px;
-            top: 60px;
             opacity: 0.5;
             filter: grayscale(1);
+            margin: auto;
+            display: block;
+            width: 100%;
+            width: 900px;
+            text-align: center;
+            padding-top: 80px;
+        }
+        .watermark img {
+            height: 300px;
         }
     }
 
