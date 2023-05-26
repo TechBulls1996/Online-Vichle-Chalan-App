@@ -25,6 +25,7 @@ include_once('includes/header.php');
                                 <tr>
                                     <th scope="col">Sr.no</th>
                                     <th scope="col">Username</th>
+                                    <th scope="col">Email</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Action</th>
 
@@ -96,6 +97,9 @@ include_once('includes/header.php');
                         },
                         {
                             data: 'username'
+                        },
+                        {
+                            data: 'email'
                         },
                         {
                             //data: 'status'
