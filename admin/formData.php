@@ -8,6 +8,33 @@ $cols = array(
     'owner_name' => "SACHINE",
     'mobileno' => "",
 );
+
+$totalTax = 0;
+if ($_REQUEST['id']) {
+    $sql = "SELECT  SUM(total_tax) AS total_tax_sum FROM formData";
+    if (isset($_REQUEST['id'])) {
+        $sql = $sql . " WHERE uid = " . $_REQUEST['id'];
+    }
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        $array = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $array[] = $row;
+        }
+
+        $dataset = array(
+            "echo" => 1,
+            "totalrecords" => count($array),
+            "totaldisplayrecords" => count($array),
+            "data" => $array
+        );
+
+        echo json_encode($dataset);
+    } else {
+        echo "Error executing query: " . mysqli_error($conn);
+    }
+}
 ?>
 <div class="container-fluid mt-3">
     <div class="row">
@@ -20,6 +47,16 @@ $cols = array(
 
             <h4 class="text-danger ms-5" id="delMsg"></h4>
             <h4 class="text-success ms-5" id="staMsg"></h4>
+
+            <div class="row">
+                <div class="col-sm">
+                    <h3>Total Tax</h3>
+                    <p class="text-success">
+                        <?= $totalTax ?>
+                    </p>
+                </div>
+                <div class="col-sm"></div>
+            </div>
 
             <table class="table table-success table-striped table-hover p-2" id="ajax-datatable">
                 <h5 class="text-danger" id="delMsg"></h5>
