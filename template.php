@@ -1,5 +1,6 @@
 <?php
 include_once('./helpers/constant.php');
+include_once('./includes/header.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@ include_once('./helpers/constant.php');
             left: 250px;
             top: 60px;
             opacity: 0.5;
-            filter: alpha(opacity=50);
+            filter: grayscale(1);
         }
     }
 
@@ -38,6 +39,9 @@ include_once('./helpers/constant.php');
             margin: auto;
             display: block;
             width: 100%;
+            width: 900px;
+            text-align: center;
+            padding-top: 80px;
         }
         .watermark img {
             height: 300px;
