@@ -21,7 +21,8 @@ if ($_REQUEST['page'] == 'users') {
 
 
 if ($_REQUEST['page'] == 'formdata') {
-    $sql = "SELECT *  FROM `formData` ";
+    $userId = $_REQUEST['userId'];
+    $sql = "SELECT formData.*, users.username FROM `formData` LEFT JOIN `users` ON `formData`.`uid` = `users`.`id` where uid = '$userId'";
     $res = mysqli_query($conn, $sql);
     $array = [];
     while ($row = mysqli_fetch_assoc($res)) {

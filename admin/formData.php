@@ -1,5 +1,14 @@
 <?php
 include_once('includes/header.php');
+$cols = array(
+    'vehicle_no' => "HR29292918",
+    'vehicle_type' => "2",
+    'chassis_no' => "38383JWJJS",
+    'owner_name' => "SACHINE",
+    'mobileno' => "",
+    'mv_tax' => "200",
+
+);
 ?>
 <div class="container-fluid mt-3">
     <div class="row">
@@ -17,12 +26,15 @@ include_once('includes/header.php');
                 <h5 class="text-danger" id="delMsg"></h5>
                 <thead>
                     <tr>
+                        <th></th>
                         <th scope="col">Sr.no</th>
-                        <th scope="col">Vehicle</th>
+                        <?php
+                        foreach (array_keys($cols) as $ind => $key) {
 
-                        <th scope="col">Status</th>
+                            echo "<th>$key</th>";
+                        }
+                        ?>
                         <th scope="col">Action</th>
-
                     </tr>
                 </thead>
             </table>
@@ -33,40 +45,80 @@ include_once('includes/header.php');
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 </script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 <script>
-    var dataSrc = [];
-    var table = $('#ajax-datatable').dataTable({
+    var table = $('#ajax-datatable').DataTable({
         "processing": true,
-        "ajax": "listajax.php?page=formdata",
+        "ajax": "listajax.php?page=formdata&userId=<?= $_GET['id'] ?>",
         "columns": [{
+                className: 'dt-control',
+                orderable: false,
+                data: null,
+                defaultContent: '',
+            },
+            {
                 //data: 'id'
                 data: 'SrNo',
                 render: function(data, type, row, meta) {
                     return meta.row + 1;
                 }
             },
-            {
-                data: 'username'
-            },
-            {
-                render: (data, type, row) => {
-                    if (row.status == 'active') {
-                        return `<div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="viewStatus" value='${row.id}' style='height:20px; width:3em;' checked></div>`;
-                    } else {
-                        return `<div class="form-check form-switch"> <input class="form-check-input" type="checkbox" id="viewStatus" value='${row.id}' style='height:20px; width:3em;'></div>`;
-                    }
-                }
-            },
-            {
+            <?php
+            foreach (array_keys($cols) as $key) {
+                echo "{ data : '$key' },";
+            } ?> {
                 render: (data, type, row) => {
                     return `<a href='formData.php?id=${row.id}' class='btn-sm btn btn-info'>View</a>  <button class='btn-sm btn btn-danger ms-2' id="delValue" value='${row.id}'>Delete</button>`;
                 }
             }
-        ]
+        ],
+        "order": [
+            [1, 'asc']
+        ],
+        "responsive": true,
+
     });
+
+    // Add event listener for opening and closing details
+    $('#ajax-datatable tbody').on('click', 'td.dt-control', function() {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+
+        if (row.child.isShown()) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        } else {
+            // Open this row
+            row.child(format(row.data())).show();
+            tr.addClass('shown');
+        }
+    });
+
+    function format(d) {
+        // `d` is the original data object for the row
+        return (
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<tr>' +
+            '<td>Total_tax:</td>' +
+            '<td>' +
+            d.total_tax +
+            '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>barrier_district:</td>' +
+            '<td>' +
+            d.barrier_district +
+            '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>selected_state:</td>' +
+            '<td>' + d.selected_state + '</td>' +
+            '</tr>' +
+            '</table>'
+        );
+    }
 </script>
 
 </html>
