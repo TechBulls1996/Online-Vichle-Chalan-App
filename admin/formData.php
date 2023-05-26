@@ -15,7 +15,7 @@ $sql = "SELECT  SUM(total_tax) AS total_tax_sum FROM formData";
 if (isset($_REQUEST['id']) && $_REQUEST['id'] > 0) {
     $sql = $sql . " WHERE uid = " . $_REQUEST['id'];
 }
-echo $sql;
+
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
