@@ -256,7 +256,7 @@ include_once('./helpers/constant.php');
                         </td>
                     </tr>
                     <tr valign="top">
-                        <td colspan="3"><span style="font-weight: bold;">Grand Total : </span><img src="http://rtoonline.in/pb/Online Tax Payment Portal_files/rupees_sign.png?v=64707ff1dc8e0" alt="" width="10px" height="10px"> 100</span>/- ( <span
+                        <td colspan="3"><span style="font-weight: bold;">Grand Total : </span>&#8377; 100</span>/- ( <span
                             style="text-transform:uppercase;">ONE HUNDRED 
                             ONLY</span>)
                       </td>
