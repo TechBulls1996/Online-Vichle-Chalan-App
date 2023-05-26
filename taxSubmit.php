@@ -1,6 +1,6 @@
 <?php
 require_once("includes/connection.php");
-
+require_once("vendor/autoload.php");
 // Check if the table exists
 $tableName = 'formData';
 
@@ -79,3 +79,15 @@ if ($result) {
 
 // Close the database conn
 mysqli_close($conn);
+
+
+
+//generate pdf
+$mpdf = new \Mpdf\Mpdf();
+
+$mpdf->Bookmark('Start of the document');
+// Write some HTML code:
+$mpdf->WriteHTML('Hello World');
+
+// Output a PDF file directly to the browser
+$mpdf->Output();
