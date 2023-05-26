@@ -197,7 +197,7 @@ include_once('includes/header.php');
                     let selstatus = $("#selStatus").val();
 
                     $.ajax({
-                        url: 'adminajax.php',
+                        url: 'adminAjax.php',
                         method: 'post',
                         data: {
                             name,
