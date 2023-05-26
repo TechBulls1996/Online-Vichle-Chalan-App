@@ -7,9 +7,6 @@ $cols = array(
     'chassis_no' => "38383JWJJS",
     'owner_name' => "SACHINE",
     'mobileno' => "",
-    'mv_tax' => "200",
-
-
 );
 ?>
 <div class="container-fluid mt-3">
