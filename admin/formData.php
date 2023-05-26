@@ -55,13 +55,7 @@ if ($result) {
                         </div>
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div class="card">
-                        <div class="card-body">
 
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
