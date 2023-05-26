@@ -6,12 +6,7 @@ include_once('includes/header.php');
 //     header('location:index.php');
 // }; 
 ?>
-
-
-
 <div class="container-fluid mt-3">
-
-
     <div class="row">
         <div class="col-md-12 mb-3">
             <h4 class="text-danger ms-5" id="delMsg"></h4>
