@@ -3,7 +3,7 @@
 include_once('../includes/connection.php');
 
 if ($_REQUEST['page'] == 'users') {
-    $sql = "SELECT id, username, status FROM `users` where type='user'";
+    $sql = "SELECT id, username, status, email FROM `users` where type='user'";
     $res = mysqli_query($conn, $sql);
     $array = [];
     while ($row = mysqli_fetch_assoc($res)) {

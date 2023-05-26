@@ -40,7 +40,7 @@ if (isset($_POST['view'])) {
     $res = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($res);
     $name = $row['username'];
-    $email = $row['username'];
+    $email = $row['email'];
     $status = $row['status'];
     $viewMsg = array('name' => $name, 'email' => $email, 'status' => $status,);
     echo json_encode($viewMsg);
