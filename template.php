@@ -1,14 +1,40 @@
 <?php
 include_once('./helpers/constant.php');
-include_once('./includes/header.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head id="j_idt2">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkpost ~1~85</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/images/vahan-icon.png" sizes="16x16">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/grid-css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=7.0">
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script> -->
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=7.0">
+    </script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/core.js?ln=primefaces&v=7.0">
+    </script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/components.js?ln=primefaces&v=7.0">
+    </script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/jsf.js?ln=javax.faces&stage=Development">
+    </script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/commonvalidation.js?ln=js">
+    </script>
+    <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/login.js?ln=js"></script>
+
 </head>
 <style>
     @page {
