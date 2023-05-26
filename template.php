@@ -34,8 +34,12 @@ include_once('./helpers/constant.php');
     <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/commonvalidation.js?ln=js">
     </script>
     <script src="https://checkpost.parivahan.gov.in/checkpost/faces/javax.faces.resource/login.js?ln=js"></script>
-
-</head>
+    <script>
+    function textRepeat() {
+        var str = document.getElementById("regn_number").value + " / " + document.getElementById("payment_date").value + ", ";
+        document.getElementById("regn_date").innerHTML = str.repeat(34);
+    }
+</script>
 <style>
     @page {
         size: auto;
@@ -98,8 +102,8 @@ include_once('./helpers/constant.php');
         border: none !important;
     }
 </style>
-
-<body onLoad=" //textRepeat()">
+</head>
+<body onLoad="textRepeat()">
     <!-- ,textRepeat()     -->
     <div class="watermark">
        <img id="j_idt10" src="<?= $URL ?>/assets/img/logo/HR_logo.png" alt="">
@@ -276,11 +280,6 @@ include_once('./helpers/constant.php');
 
 
 
-<script>
-    function textRepeat() {
-        var str = document.getElementById("regn_number").value + " / " + document.getElementById("payment_date").value + ", ";
-        document.getElementById("regn_date").innerHTML = str.repeat(34);
-    }
-</script>
+
 </body>
 </html>
