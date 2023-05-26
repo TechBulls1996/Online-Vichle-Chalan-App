@@ -51,7 +51,7 @@ if ($result) {
                     <div class="card">
                         <div class="card-body">
                             <h3>Total Tax in Numbers</h3>
-                            <p class="text-success"> RS <?= numberToWords($totalTax) ?></p>
+                            <p class="text-success text-capitalize"> <?= numberToWords($totalTax) ?></p>
                         </div>
                     </div>
                 </div>
