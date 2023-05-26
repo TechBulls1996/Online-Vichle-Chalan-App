@@ -1,7 +1,7 @@
 <?php
 require_once("includes/connection.php");
 include_once('./helpers/constant.php');
-
+if(isset($_POST)){
 // Check if the table exists
 $tableName = 'formData';
 
@@ -375,4 +375,7 @@ else {
 }
 // Close the database conn
 mysqli_close($conn);
+}else{
+    echo "Please submit form carefully.";
+}
 ?>
